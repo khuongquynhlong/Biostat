@@ -5,5 +5,5 @@ email: quynhlong.khuong@student.uhasselt.be
 permalink: "/stories/:title"
 url: "https://github.com/khuongquynhlong/Biostat"
 relative_permalinks: false
-theme: jekyll-theme-architect
+theme: jekyll-theme-time-machine
 logo: "https://www.uhasselt.be/images/logos/2019/UHasselt-standaard.png"
