@@ -35,7 +35,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 klippy::klippy(position = c('top', 'right'), color = 'red', tooltip_message = 'Click to copy', tooltip_success = 'Copied! :D')
 ```
 
-<div style= "height:50px; width:auto; max-width:80px;">
+<div style= "height:60px; width:auto; max-width:100px;">
 [![My github](images/github2.png)](https://khuongquynhlong.github.io/Biostat/)
 </div>
 

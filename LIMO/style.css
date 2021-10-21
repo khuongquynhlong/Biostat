@@ -53,6 +53,8 @@ h1 {
     # font-variant-caps: all-petite-caps;
     # padding: 10px; 
     background-color: #EBEBEB; 
+    color: #18BC9C;
+    font-weight: 600;
 }
 
 h1.title {
