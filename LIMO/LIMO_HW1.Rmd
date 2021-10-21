@@ -39,10 +39,6 @@ klippy::klippy(position = c('top', 'right'), color = 'red', tooltip_message = 'C
 [![My github](images/github2.png)](https://khuongquynhlong.github.io/Biostat/)
 </div>
 
-<br>
-
-<br>
-
 
 ```{r}
 library(tidyverse)
