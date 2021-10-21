@@ -1,9 +1,9 @@
 title: "Master in Statistics and Data Science"
 subtitle: "Khuong Quynh Long, 2021"
-description: "Khuong Quynh Long, 2021\nThis is my personal repository for the Master's program at Uhasselt, Belgium"
+description: "This is my personal repository for the Master's program at Uhasselt, Belgium"
 email: quynhlong.khuong@student.uhasselt.be
 permalink: "/stories/:title"
 url: "https://github.com/khuongquynhlong/Biostat"
 relative_permalinks: false
-theme: jekyll-theme-cayman
-logo: "https://www.uhasselt.be/images/logos/2019/UHasselt-standaard.png"
+theme: jekyll-theme-architect
+show_downloads: true
