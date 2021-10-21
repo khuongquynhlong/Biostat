@@ -32,11 +32,17 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
 ```{r klippy, echo=FALSE, include=TRUE}
-klippy::klippy(position = c('top', 'right'), color = 'red', tooltip_message = 'Click to copy', tooltip_success = 'Copied-Gekopieerd! :D')
+klippy::klippy(position = c('top', 'right'), color = 'red', tooltip_message = 'Click to copy', tooltip_success = 'Copied! :D')
 ```
 
+<div style= "height:50px; width:auto; max-width:80px;">
+[![My github](images/github2.png)](https://khuongquynhlong.github.io/Biostat/)
+</div>
 
-[Questions for Homework 1](https://learn-eu-central-1-prod-fleet01-xythos.content.blackboardcdn.com/5d63c10105170/2604206?X-Blackboard-Expiration=1634493600000&X-Blackboard-Signature=zqepaI0cfPKoqqesXUfvjsQmAhTMErCl%2FXvyXmm03rA%3D&X-Blackboard-Client-Id=119339&response-cache-control=private%2C%20max-age%3D21600&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27LIMO_HW1.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20211017T120000Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21600&X-Amz-Credential=AKIAZH6WM4PL5M5HI5WH%2F20211017%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=04465ce05c1934be640836b0b919f7d814fbad0d1c7f19f18d849681c390a771)
+<br>
+
+<br>
+
 
 ```{r}
 library(tidyverse)
