@@ -50,9 +50,9 @@ library(viridis)
 
 # Question 1 {.tabset .tabset-fade .tabset-pills}
 
-Immunoglobulins in the blood are known to protect against diseases. We consider a preclinical study in which a potential new drug, a chemical compound with the name ADDF19, is evaluated for negative side effects. One of these effects, could be its negative effect on the blood serum levels of Immunoglobulin IgG1. Healthy mice have IgG1 blood serum concentrations between 1:2 and 5 *mg/l*.
+Immunoglobulins in the blood are known to protect against diseases. We consider a preclinical study in which a potential new drug, a chemical compound with the name ADDF19, is evaluated for negative side effects. One of these effects, could be its negative effect on the blood serum levels of Immunoglobulin IgG1. Healthy mice have IgG1 blood serum concentrations between 1,2 and 5 *mg/l*.
 
-A lab animal experiment is set up with 18 mice. For each of the following doses of ADDF19, three mice were included in the study: 0:5*µg*, 0:75*µg*, 1*µg*, 1:25*µg*, 1:5*µg* and 2*µg*. The data are given in the R data file `mice.RData`.
+A lab animal experiment is set up with 18 mice. For each of the following doses of ADDF19, three mice were included in the study: 0,5*µg*, 0,75*µg*, 1*µg*, 1,25*µg*, 1,5*µg* and 2*µg*. The data are given in the R data file `mice.RData`.
 
 You are asked to perform statistical analysis for answering the following research questions:
 
