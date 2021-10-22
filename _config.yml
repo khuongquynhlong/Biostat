@@ -8,6 +8,3 @@ baseurl: ""
 relative_permalinks: false
 theme: jekyll-theme-architect
 show_downloads: true
-gems:
-  - jekyll-paginate
-markdown: kramdown
