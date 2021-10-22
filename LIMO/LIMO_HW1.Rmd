@@ -450,11 +450,11 @@ df_pwr %>% filter(power >= 0.8 & power <0.81) %>% datatable()
 mycolor <- c("#014636", "#016c59", "#02818a", "#3690c0", "#67a9cf",
              "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#980043")
 
-plot_ly(data = df_pwr, x = ~sample_size, y = ~effect_size, 
+plot_ly(data = df_pwr, x = ~effect_size, y = ~sample_size, 
         z = ~power, color = ~as.factor(sample_size), 
         colors = mycolor,
-        text = paste0("<b>Sample size:</b> ", df_pwr$sample_size, "<br>",
-                      "<b>Effect size:</b> ", df_pwr$effect_size, "<br>",
+        text = paste0("<b>Effect size:</b> ", df_pwr$effect_size, "<br>",
+                      "<b>Sample size:</b> ", df_pwr$sample_size, "<br>",
                       "<b>Power:</b> ", round(df_pwr$power, 2), "<br>"),
         hoverinfo = "text") %>%
     add_markers() %>% 
@@ -470,25 +470,23 @@ plot_ly(data = df_pwr, x = ~sample_size, y = ~effect_size,
 
 <span style="color: #3690c0;">2D graph for relationship between sample size and effect size, fixing power at approximately 0.8:</span> 
 
-*Note: Here ggplot2 is used instead of plotly to be able to render to MS word file*
 
 ```{r, fig.fullwidth = TRUE, fig.height = 6, fig.width = 9}
-df_pwr %>% filter(power >= 0.8 & power <0.81) %>% 
-    ggplot(aes(x = effect_size, y = sample_size, color = sample_size, fill = sample_size)) +
-    geom_point(size = 5, alpha = 0.8, show.legend = F, shape = 21) + 
-    geom_smooth(se = F, show.legend = F, color = "#02818a") + 
-    scale_fill_viridis(option = "C", direction = -1) +
-    scale_color_viridis(option = "C", direction = -1) +
-    scale_y_continuous(breaks = c(18*c(1:10))) +
-    labs(
-        x = "Effect size",
-        y = "Sample size",
-        title = "Relationship between sample size and effect size",
-        subtitle = "The Power is fixed at approximately 0.8."
-    ) +
-    theme_bw() +
-    mytheme()
-
+df_pwr_fix <- df_pwr %>% filter(power >= 0.8 & power <0.81)
+df_pwr_fix %>% 
+  plot_ly(x = ~effect_size, y = ~sample_size, 
+          text = paste0("<b>Sample size:</b> ", df_pwr_fix$sample_size, "<br>",
+                        "<b>Effect size:</b> ", df_pwr_fix$effect_size, "<br>",
+                        "<b>Power:</b> ", "~0.8", "<br>"),
+          hoverinfo = "text",
+          marker = list(size = 15, color = "#fd8d3c",
+                        line = list(color = "#e31a1c", width = 2))) %>%
+  add_lines(line = list(shape = "spline"), size = I(3)) %>%
+  add_markers() %>% 
+  layout(title = "Relationship between sample size and effect size",
+         xaxis = list(title = "Effect size"),
+         yaxis = list(title = "Sample size"),
+         showlegend = FALSE)
 ```
 
 
