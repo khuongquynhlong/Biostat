@@ -1,7 +1,7 @@
 ---
 title: "Master in Statistics and Data Science"
 author: 'Student: Quynh Long Khuong'
-date: "Hasselt, Belgium, `r Sys.Date()`"
+date: "Hasselt, Belgium, 06 October 2021" #`r Sys.Date()`
 output:
   html_document:
     css: style.css
@@ -29,7 +29,13 @@ htmltools::img(src = "https://www.uhasselt.be/images/logos/2019/UHasselt-standaa
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
-[Questions for Practical session 1 (01/10/2021)](https://bb.uhasselt.be/bbcswebdav/pid-255338-dt-content-rid-5377740_1/courses/4406-2122/PtacricalSession_1_30092021_UH_V1.html)
+<div style= "height:60px; width:auto; max-width:100px;">
+[![My github](images/github2.png)](https://khuongquynhlong.github.io/Biostat/)
+</div>
+
+<br>
+
+<br>
 
 ```{r}
 library(tidyverse)
