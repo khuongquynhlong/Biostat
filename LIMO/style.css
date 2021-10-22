@@ -87,6 +87,14 @@ p {
     text-align: justify;
 }
 
+caption {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #18BC9C;
+    text-align: left;
+    font-weight: 600;
+}
+
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
     color: #ffffff;
     background-color: #E73B2B;
