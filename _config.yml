@@ -1,8 +1,10 @@
 title: "Khuong Quynh Long"
 subtitle: "Khuong Quynh Long, 2021"
 description: "This is the repository for my Master in Statistics and Data Science program at Hasselt University, Belgium"
+name: Biostat
+site_title: Biostat
 url: https://github.com/khuongquynhlong/Biostat
-baseurl: https://github.com/khuongquynhlong/Biostat
+baseurl: ""
 relative_permalinks: false
 theme: jekyll-theme-architect
 show_downloads: true
