@@ -1,0 +1,203 @@
+---
+title: "Master in Statistics and Data Science"
+author: 'Student: Quynh Long Khuong'
+date: "Hasselt, Belgium, `r Sys.Date()`"
+output:
+  html_document:
+    css: style.css
+    highlight: pygments
+    number_sections: no
+    theme: flatly
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+  word_document:
+    toc: yes
+    toc_depth: '2'
+subtitle: 'Programming in R: Practical session 2'
+institute: Hasselt University
+---
+
+
+```{r, echo=FALSE}
+htmltools::img(src = "https://www.uhasselt.be/images/logos/2019/UHasselt-standaard.png", 
+               alt = 'logo', 
+               style = 'position:absolute; top:0; right:0; padding:10px; height:140px; width:auto; max-width:300px;')
+```
+
+```{r setup,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+[Questions for Practical session 2 (05/10/2021)](https://bb.uhasselt.be/bbcswebdav/pid-256789-dt-content-rid-5409109_1/courses/4406-2122/PtacricalSession_2a_05102021_UH_V1.html)
+
+```{r}
+library(tidyverse)
+```
+
+# Question 1 {.tabset .tabset-fade .tabset-pills}
+
+**In this question we focus on the `airquality` data which available as data frame in R. Use `help(airquality)` to get information about the data**
+
+```{r}
+data("airquality")
+head(airquality)
+```
+
+
+## Q1.1
+
+**1. Define an R object which contain the information about the wind speed**
+
+```{r}
+wind_speed <- airquality$Wind
+```
+
+## Q1.2
+
+**2. Calculate the mean, median and variance for the wind speed**
+```{r}
+sprintf("Wind speed: mean = %.2f; median = %2.f; and variance = %.2f",
+        mean(wind_speed), median(wind_speed), var(wind_speed))
+```
+
+
+## Q1.3
+
+**3. Produce the figure below**
+
+```{r, fig.fullwidth = TRUE, fig.height = 5, fig.width = 9}
+par(mfrow = c(1, 2))
+hist(wind_speed, main = "histogram of wind speed", xlab = "x")
+boxplot(wind_speed, ylab = NULL, xlab = NULL, col = "#df536b")
+```
+
+# Question 2 {.tabset .tabset-fade .tabset-pills}
+
+**In this question we focus on the `ToothGrowth` data which available as data frame in R. Use `help(ToothGrowth)` to get information about the data**
+
+```{r}
+data("ToothGrowth")
+head(ToothGrowth)
+```
+
+## Q2.1
+
+**1. The response variable is the Tooth length**
+
+```{r}
+tooth_length <- ToothGrowth$len
+```
+
+## Q2.2
+
+**2. Test if the Supplement type has an effect on the tooth length**
+
+```{r, fig.fullwidth = TRUE, fig.height = 5, fig.width = 9}
+x <- t.test(ToothGrowth$len ~ ToothGrowth$supp)
+ToothGrowth %>%
+  ggplot(aes(x = supp, y = len)) +
+  geom_dotplot(aes(color = supp, fill = supp) ,binaxis='y', 
+                 stackdir='center', 
+                 dotsize = 0.9,
+                 alpha = 0.7, show.legend = F) +
+  geom_boxplot(aes(color = supp), width = 0.3, fill = NA, size = 1) +
+  annotate("text", x = 1.5, y = 0, 
+           label = paste0("ttest, ", "p-value = ", round(x$p.value, 3)), size = 6) +
+  theme_bw() + 
+      theme(
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        axis.line = element_line(size = 0.3),
+        axis.text = element_text(size = 12, color = "black", hjust=1),
+        axis.title = element_text(face = "bold", size = 12, color = "black"),
+        plot.title = element_text(face = "bold", size = 14, color = "black", hjust = 0.5),
+        legend.position = "top",
+        legend.text = element_text(size = 14)
+    ) +
+    labs(
+        x = "Group",
+        y = "Length",
+        color = NULL
+    ) 
+```
+
+# Question 3 {.tabset .tabset-fade .tabset-pills}
+
+**For the `ToothGrowth` data, produce an histogram for the tooth length (by group) with the following structure.**
+
+```{r, fig.fullwidth = TRUE, fig.height = 7, fig.width = 9}
+par(mfrow = c(2, 1))
+hist(ToothGrowth$len[ToothGrowth$supp == "VC"], main = "tooth length (VC)", col = "#df536b")
+hist(ToothGrowth$len[ToothGrowth$supp == "OJ"], main = "tooth length (VC)", col = "#74c476")
+```
+
+# Question 4 {.tabset .tabset-fade .tabset-pills}
+
+**Create the following data frame:**
+```
+##   Name Gender Height
+## 1    A      M    180
+## 2    B      M    170
+## 3    C      F    170
+## 4    D      F    155
+## 5    E      F    167
+## 6    F      F    154
+```
+
+```{r}
+Name <- c("A", "B", "C", "D", "E", "F")
+Gender <- c("M", "M", "F", "F", "F", "F")
+Height <- c(180, 170, 170, 155, 167, 154)
+
+df_q4 <- data.frame(Name, Gender, Height)
+df_q4
+```
+
+
+
+
+# Question 5 {.tabset .tabset-fade .tabset-pills}
+
+
+**In this question we focus on the `chickwts` data which available as data frame in R. Use `help(chickwts)` to get information about the data.**
+
+
+```{r}
+data("chickwts")
+head(chickwts)
+```
+
+
+## Q5.1
+**Create a new data frame which contains data only of the `horsebean` and the `soybean` groups. How many observations are included in the new dataset**
+
+```{r}
+table(chickwts$feed)
+```
+
+```{r}
+chick_hors_soy <- chickwts %>% filter(feed %in% c("horsebean", "soybean"))
+```
+
+## Q5.2
+
+**Calculate the mean and standard deviation of the weight by group**
+
+```{r}
+chick_hors_soy %>% group_by(feed) %>% summarise(Mean = mean(weight),
+                                                SD = sd(weight))
+```
+
+
+
+
+
+
+
+
+
+
+
+
