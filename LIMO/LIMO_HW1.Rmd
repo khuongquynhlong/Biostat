@@ -110,10 +110,11 @@ plot.mean = function(x){
 # Dot plot + mean value of IgG1 per concentration
 mice %>% 
   mutate(concentration = as.factor(concentration)) %>%
-  ggplot(aes(x = concentration, y = IgG1, color = concentration, fill = concentration)) + 
+  ggplot(aes(x = concentration, y = IgG1, fill = concentration)) + 
   geom_dotplot(binaxis ='y', stackdir ='center', dotsize = 1.5, alpha = 0.8,
-               show.legend = F) +
+               show.legend = F, color = "#e31a1c") +
   stat_summary(fun.data = "plot.mean", geom = "errorbar", colour = "#3690c0", size = 1) +
+  scale_fill_brewer(palette = "Set1") +
   labs(x = "ADDF19 dose (µg)",
        y = "IgG1 (mg/l)",
        title = "Blood serum levels of IgG1 per concentration",
@@ -366,7 +367,7 @@ $F_t(.)$ is the CDF of a noncentral t-distribution
 
 ***Doing simulation in R***
 
-<span style="color: #e73b2b;">**Method: the power will be first calculated for each sample size and effect size. The relationship between sample size and effect size then will be obtained by fixing power at approximately 0.8**:</span> 
+<span style="color: #e73b2b;">**Method: the power will be first calculated for each sample size and effect size. Power values then will be fixed at approximately 0.8 to generate the graph of relationship between sample size and effect size**:</span> 
 
 <span style="color: #3690c0;">Function to create design matrix X:</span> 
 
@@ -460,9 +461,9 @@ plot_ly(data = df_pwr, x = ~effect_size, y = ~sample_size,
     add_markers() %>% 
     layout(title = "Relationship between power, sample size, and effect size",
            scene = list(
-               xaxis = list(title = 'Sample size'),
-               yaxis = list(title = 'Effect size'),
-               zaxis = list(title = 'Power')),
+               xaxis = list(title = "Effect size"),
+               yaxis = list(title = "Sample size"),
+               zaxis = list(title = "Power")),
            showlegend = FALSE)
 ```
 
