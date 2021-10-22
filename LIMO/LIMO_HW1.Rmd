@@ -343,7 +343,7 @@ With n - p degrees of freedom and noncentrality parameter (ncp) $\nu$
 
 In the one-sided alternative hypotheses, the power is given by
 
-$$power = P \left\{T < t_{n-2;1-\alpha/2}|\beta_1 = \delta\right\} = F_t(-t_{n-2;1-\alpha/2}; n-p, \nu)$$
+$$power = P \left\{T < t_{n-p;1-\alpha}|\beta_1 = \delta\right\} = F_t(-t_{n-p;1-\alpha}; n-p, \nu)$$
 For fixed $\delta < 0$
 
 $F_t(.)$ is the CDF of a noncentral t-distribution
