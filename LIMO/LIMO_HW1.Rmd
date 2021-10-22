@@ -50,7 +50,7 @@ library(viridis)
 
 # Question 1 {.tabset .tabset-fade .tabset-pills}
 
-Immunoglobulins in the blood are known to protect against diseases. We consider a preclinical study in which a potential new drug, a chemical compound with the name ADDF19, is evaluated for negative side effects. One of these effects, could be its negative effect on the blood serum levels of Immunoglobulin IgG1. Healthy mice have IgG1 blood serum concentrations between 1:2 and 5 mg/l.
+Immunoglobulins in the blood are known to protect against diseases. We consider a preclinical study in which a potential new drug, a chemical compound with the name ADDF19, is evaluated for negative side effects. One of these effects, could be its negative effect on the blood serum levels of Immunoglobulin IgG1. Healthy mice have IgG1 blood serum concentrations between 1:2 and 5 *mg/l*.
 
 A lab animal experiment is set up with 18 mice. For each of the following doses of ADDF19, three mice were included in the study: 0:5*µg*, 0:75*µg*, 1*µg*, 1:25*µg*, 1:5*µg* and 2*µg*. The data are given in the R data file `mice.RData`.
 
@@ -82,7 +82,7 @@ You are asked to perform statistical analysis for answering the following resear
 
 ```{r}
 load("data/mice.RData")
-mice %>% datatable()
+mice %>% datatable(caption = "Table 1: Mice dataset.")
 ```
 
 <br>
@@ -117,7 +117,7 @@ mice %>%
   scale_fill_brewer(palette = "Set1") +
   labs(x = "ADDF19 dose (µg)",
        y = "IgG1 (mg/l)",
-       title = "Blood serum levels of IgG1 per concentration",
+       title = "Figure 1: Blood serum levels of IgG1 per concentration",
        subtitle = "The dots represent values of IgG1 and blue lines are mean of IgG1 per concentration") +
     theme_bw() +
     mytheme()
@@ -159,7 +159,7 @@ Linear model of `IgG1` and `ADDF19` is
 
 $$IgG1_i = 2.9627 - 0.49*ADDF19_i + \varepsilon _i$$
 
-<span style="color: #3690c0;">***Conclusion:***</span> The blood level concentration of IgG1 decreases 0.49 mg/l on average when the dose of ADDF19 increases by 1 µg.
+<span style="color: #3690c0;">***Conclusion:***</span> The blood level concentration of IgG1 decreases by 0.49 mg/l on average when the dose of ADDF19 increases by 1 µg.
 
 
 <br>
@@ -191,7 +191,7 @@ ub <- -0.49 + qt(0.975, df = 16)*0.1671
 sprintf("lower bound: %.3f; upper bound: %.3f", lb, ub)
 ```
 
-The confidence interval of thus becomes [`r round(lb, 3)`, `r round(ub, 3)`]
+The confidence interval of $\beta_1$ thus becomes [`r round(lb, 3)`, `r round(ub, 3)`]
 
 
 
@@ -209,11 +209,11 @@ The null hypothesis is that there is no effect of `ADDF19` on the mean `IgG1` bl
 
 $$H_0: \beta_1 = 0$$
 
-Since we want to evaluate the **negative effect** of `ADDF19` in the `IgG1` blood level concentrations, the one-sided alternative hypothesis is applied. Thus, the alternative hypothesis becomes
+Since we want to evaluate the **negative side effect** of `ADDF19` on the `IgG1` blood level concentrations, the one-sided alternative hypothesis is applied. Thus, the alternative hypothesis becomes
 
 $$H_1: \beta_1 < 0$$
 
-Calculating the one-sided p-value, which is the probability of observing the data or more extreme cases (toward H~1~) given the null hypothesis is true
+Calculating the one-sided p-value, which is the probability of observing the data or more extreme cases (toward $H_1$) given the null hypothesis is true
 
 $$p = P_0 \left\{T\leq t\right\} = F_T(t; n - 2)$$
 
@@ -244,7 +244,7 @@ paste0("One-sided p-value = ", pvalue)
 
 **Summary**
 
-The new drug ADDF19 has a negative effect on the blood serum levels of immunoglobulin IgG1. Specifically, the IgG1 blood serum level decreases by 0.49 mg/l on average when dose of ADDF19 increases by 1 µg (95% CI: -0.84 to -0.14; one-sided p-value = 0.0049).
+The new drug ADDF19 has a negative effect on the blood serum levels of immunoglobulin IgG1. Specifically, the IgG1 blood serum level decreases by 0.49 mg/l on average when dose of ADDF19 increases by 1 µg (95% CI: -0.84 to -0.14; statistically significant at one-sided p-value = 0.0049).
 
 
 :::
@@ -301,7 +301,7 @@ $$power = P \left\{|T| > t_{n-2;1-\alpha/2}|\beta_1^∗\right\} $$
 <br>
 
 
-**ANSWERS**
+**ANSWER**
 
 <br>
 
@@ -310,11 +310,11 @@ $$power = P \left\{|T| > t_{n-2;1-\alpha/2}|\beta_1^∗\right\} $$
 
 **Input (fixed) parameters**
 
-* Residual variance: $\sigma^2$ obtain from previous model: `sum((m1$residuals)^2)/m1$df.residual` = 0.122135.
+* Residual variance: $\sigma^2$ obtained from previous model: `sum((m1$residuals)^2)/m1$df.residual` = 0.122135.
 
 * The regressor values (18 values) to construct design matrix $\boldsymbol{X}$.
 
-* As explained in Question 1, here I choose one-sided alternative hypothesis.
+* As explained in Question 1, the one-sided alternative hypothesis is chosen.
 
 :::
 ::::
@@ -341,12 +341,12 @@ $$T = \frac{\hat{\beta_1} - \delta}{\sigma_{\beta_1}} + \frac{\delta}{\sigma_{\b
 
 With n - p degrees of freedom and noncentrality parameter (ncp) $\nu$
 
-In the one-sided alternative hypotheses, the power is given by
+Thus, in the one-sided alternative hypotheses, the power is given by
 
 $$power = P \left\{T < t_{n-p;1-\alpha}|\beta_1 = \delta\right\} = F_t(-t_{n-p;1-\alpha}; n-p, \nu)$$
 For fixed $\delta < 0$
 
-$F_t(.)$ is the CDF of a noncentral t-distribution
+$F_t(.; n-p, \nu)$ is the CDF of a noncentral t-distribution with degrees of freedom and ncp $\nu$
 
 <br>
 
@@ -367,11 +367,11 @@ $F_t(.)$ is the CDF of a noncentral t-distribution
 
 ***Doing simulation in R***
 
-<span style="color: #e73b2b;">**Method: the power will be first calculated for each sample size and effect size. Power values then will be fixed at approximately 0.8 to generate the graph of relationship between sample size and effect size**:</span> 
+<span style="color: #e73b2b;">**My approach: the power will be first calculated according to each sample size and effect size. Power values then will be fixed at approximately 0.8 to generate the graph of relationship between sample size and effect size**:</span> 
 
 <span style="color: #3690c0;">Function to create design matrix X:</span> 
 
-*`n` = total sample size, must be a multiple of 18 (Use the same 18 values of regressor in the Question 1)*
+*`n` = total sample size, must be a multiple of 18 (use the information from 18 values of regressor in the Question 1)*
 
 
 ```{r}
@@ -427,7 +427,7 @@ powerX(n = 180, delta = 0) # must equal alpha
 seqnum_es <-seq(-1, 0, by = 0.005)
 seqnum_n <- 18*seq(1:10)
 
-# can use expand.grid() function here
+# The expand.grid() function can also be used here
 df_pwr <- data.frame(sample_size = rep(seqnum_n, length(seqnum_es)),
                      effect_size = rep(seqnum_es, length(seqnum_n)),
                      power = NA) %>% arrange(sample_size, effect_size)
@@ -437,7 +437,7 @@ for (i in 1:nrow(df_pwr)) {
 }
 
 # Show data if powers approximate 0.8
-df_pwr %>% filter(power >= 0.8 & power <0.81) %>% datatable()
+df_pwr %>% filter(power >= 0.8 & power <0.81) %>% datatable(caption = "Table 2: Dataframe of sample size and effect size given powers are fixed at ~0.8")
 
 ```
 
@@ -459,7 +459,7 @@ plot_ly(data = df_pwr, x = ~effect_size, y = ~sample_size,
                       "<b>Power:</b> ", round(df_pwr$power, 2), "<br>"),
         hoverinfo = "text") %>%
     add_markers() %>% 
-    layout(title = "Relationship between power, sample size, and effect size",
+    layout(title = "Figure 2: Relationship between power, sample size, and effect size",
            scene = list(
                xaxis = list(title = "Effect size"),
                yaxis = list(title = "Sample size"),
@@ -484,7 +484,7 @@ df_pwr_fix %>%
                         line = list(color = "#e31a1c", width = 2))) %>%
   add_lines(line = list(shape = "spline"), size = I(3)) %>%
   add_markers() %>% 
-  layout(title = "Relationship between sample size and effect size, at power ~ 0.8",
+  layout(title = "Figure 3: Relationship between sample size and effect size, at power ~ 0.8",
          xaxis = list(title = "Effect size"),
          yaxis = list(title = "Sample size"),
          showlegend = FALSE)
