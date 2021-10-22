@@ -4,7 +4,7 @@ description: "This is the repository for my Master in Statistics and Data Scienc
 # name: Biostat
 # site_title: Biostat
 # url: https://github.com/khuongquynhlong/Biostat
-baseurl: ""
+# baseurl: ""
 relative_permalinks: false
 theme: jekyll-theme-architect
 show_downloads: true
