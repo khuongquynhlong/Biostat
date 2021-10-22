@@ -484,12 +484,15 @@ df_pwr_fix %>%
                         line = list(color = "#e31a1c", width = 2))) %>%
   add_lines(line = list(shape = "spline"), size = I(3)) %>%
   add_markers() %>% 
-  layout(title = "Relationship between sample size and effect size",
+  layout(title = "Relationship between sample size and effect size, at power ~ 0.8",
          xaxis = list(title = "Effect size"),
          yaxis = list(title = "Sample size"),
          showlegend = FALSE)
 ```
 
+<br>
+
+<span style="color: #3690c0;">***Conclusion:***</span> As the effect size decreases ($|\beta_1|$ moves toward zero), the sample size needed to achieve a power of 0.8 becomes larger.
 
 
 
