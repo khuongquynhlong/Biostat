@@ -346,7 +346,7 @@ Thus, in the one-sided alternative hypotheses, the power is given by
 $$power = P \left\{T < t_{n-p;1-\alpha}|\beta_1 = \delta\right\} = F_t(-t_{n-p;1-\alpha}; n-p, \nu)$$
 For fixed $\delta < 0$
 
-$F_t(.; n-p, \nu)$ is the CDF of a noncentral t-distribution with degrees of freedom and ncp $\nu$
+$F_t(.; n-p, \nu)$ is the CDF of a noncentral t-distribution with degrees of freedom $n-p$ and ncp $\nu$
 
 <br>
 
@@ -437,7 +437,9 @@ for (i in 1:nrow(df_pwr)) {
 }
 
 # Show data if powers approximate 0.8
-df_pwr %>% filter(power >= 0.8 & power <0.81) %>% datatable(caption = "Table 2: Dataframe of sample size and effect size given powers are fixed at ~0.8")
+df_pwr %>% 
+  filter(power >= 0.8 & power <0.81) %>% 
+  datatable(caption = "Table 2: Dataframe of sample size and effect size given powers are fixed at ~0.8")
 
 ```
 
@@ -451,20 +453,21 @@ df_pwr %>% filter(power >= 0.8 & power <0.81) %>% datatable(caption = "Table 2: 
 mycolor <- c("#014636", "#016c59", "#02818a", "#3690c0", "#67a9cf",
              "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#980043")
 
-plot_ly(data = df_pwr, x = ~effect_size, y = ~sample_size, 
-        z = ~power, color = ~as.factor(sample_size), 
-        colors = mycolor,
-        text = paste0("<b>Effect size:</b> ", df_pwr$effect_size, "<br>",
-                      "<b>Sample size:</b> ", df_pwr$sample_size, "<br>",
-                      "<b>Power:</b> ", round(df_pwr$power, 2), "<br>"),
-        hoverinfo = "text") %>%
-    add_markers() %>% 
-    layout(title = "Figure 2: Relationship between power, sample size, and effect size",
-           scene = list(
-               xaxis = list(title = "Effect size"),
-               yaxis = list(title = "Sample size"),
-               zaxis = list(title = "Power")),
-           showlegend = FALSE)
+df_pwr %>%
+  plot_ly(x = ~effect_size, y = ~sample_size, 
+          z = ~power, color = ~as.factor(sample_size), 
+          colors = mycolor,
+          text = paste0("<b>Effect size:</b> ", df_pwr$effect_size, "<br>",
+                        "<b>Sample size:</b> ", df_pwr$sample_size, "<br>",
+                        "<b>Power:</b> ", round(df_pwr$power, 2), "<br>"),
+          hoverinfo = "text") %>%
+      add_markers() %>% 
+      layout(title = "Figure 2: Relationship between power, sample size, and effect size",
+             scene = list(
+                 xaxis = list(title = "Effect size"),
+                 yaxis = list(title = "Sample size"),
+                 zaxis = list(title = "Power")),
+             showlegend = FALSE)
 ```
 
 <br>
