@@ -244,8 +244,17 @@ paste0("One-sided p-value = ", pvalue)
 
 **Summary**
 
-The new drug ADDF19 has a negative effect on the blood serum levels of immunoglobulin IgG1. Specifically, the IgG1 blood serum level decreases by 0.49 mg/l on average when dose of ADDF19 increases by 1 µg (95% CI: -0.84 to -0.14; statistically significant at one-sided p-value = 0.0049).
+<br>
 
+<p style="text-align: center; font-size: 20px"> <span style="color: #3690c0">**Side Effects of ADDF19 on the Blood Serum Levels of Immunoglobulin IgG~1~: A Pre-clinical Study**</span> </p>
+
+**Objective:** To evaluate the negative side effect of a potential new drug ADDF19 on the blood serum levels of immunoglobulin IgG~1~.
+
+**Methods:** We conducted a pre-clinical study in a lab animal setting with 18 mice. We tested six doses of ADDF19 0.5*µg*, 0.75*µg*, 1*µg*, 1.25*µg*, 1.5*µg* and 2*µg*, in which, three mice were selected for each dose. The blood serum levels of immunoglobulin IgG~1~ were measured according to each dose of ADDF19. We applied the simple linear regression to estimate the relationship between ADDF19 concentrations and the blood serum levels of immunoglobulin IgG~1~.
+
+**Results:** We found that the IgG~1~ blood serum level decreased by 0.49 mg/l on average when dose of ADDF19 increased by 1 µg (95% CI: -0.84 to -0.14; significant at one-sided p-value = 0.0049).
+
+**Conclusion:** The new drug ADDF19 had a negative side effect on the blood serum levels of immunoglobulin IgG~1~. Further studies should take into account this side effect to evaluate the safety of ADDF19.
 
 :::
 ::::
