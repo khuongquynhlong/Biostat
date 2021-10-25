@@ -7,4 +7,4 @@ site_title: Biostat
 # baseurl: ""
 relative_permalinks: false
 theme: jekyll-theme-architect
-show_downloads: true
+# show_downloads: true
