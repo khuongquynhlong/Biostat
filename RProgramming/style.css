@@ -20,6 +20,14 @@ pre code {
     border-color: white;
 }
 
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    font-weight: 600;
+}
+
+
 body {
     font-family: helvetica;
     font-size: 15px;
@@ -38,8 +46,6 @@ body {
     font-family: helvetica;
 }
 
-
-
 h1 {
     font-size: 28px;
     # color: #E73B2B;
@@ -47,6 +53,8 @@ h1 {
     # font-variant-caps: all-petite-caps;
     # padding: 10px; 
     background-color: #EBEBEB; 
+    color: #18BC9C;
+    font-weight: 600;
 }
 
 h1.title {
@@ -66,9 +74,25 @@ h3 {
 
 h4 {
     font-size: 18px;
-    # color: #E73B2B;
+    color: black;
     font-family: helvetica;
     font-style: italic;
+}
+
+p {
+    margin: 0 0 10.5px;
+    font-size: medium;
+    color: black;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+caption {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #18BC9C;
+    text-align: left;
+    font-weight: 600;
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
@@ -89,4 +113,73 @@ h4 {
   border-bottom: 10px solid #0fa1e0;
   margin-left: -10px;
 }
+
+# theme for question box
+
+.blackbox {
+  padding: 1em;
+  background: black;
+  color: white;
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+.center {
+  text-align: center;
+}
+
+
+.infobox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px solid orange;
+  border-radius: 10px;
+  background: #f5f5f5 5px center/3em no-repeat;
+}
+
+.infobox2 {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px solid #0570b0;
+  border-radius: 10px;
+  background: #f5f5f5 5px center/3em no-repeat;
+}
+
+.summarybox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px solid #18BC9C;
+  border-radius: 10px;
+  background: #f5f5f5 5px center/3em no-repeat;
+}
+
+.question {
+  background-image: url("images/question.png");
+  background-position: left top;
+}
+
+.summary {
+  background-image: url("images/summary.png");
+  background-position: left top;
+}
+
+.info {
+  background-image: url("images/info.png");
+  background-position: left top;
+}
+
+.note {
+  background-image: url("images/note.png");
+  background-position: left top;
+}
+
+# adjust for copy symbol
+
+.btn-klippy .octicon {
+    display: inline-block;
+    margin: 4px;
+    padding: 0px;
+    transform: scale(2, 2);
+}
+
+
 
