@@ -13,6 +13,7 @@ output:
     toc_depth: 2
     toc_float: yes
   pdf_document:
+    latex_engine: xelatex
     toc: yes
     toc_depth: '2'
 subtitle: 'Programming in R: Practical session 2'
@@ -36,7 +37,6 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 <br>
 
-<br>
 
 ```{r}
 library(tidyverse)
