@@ -4,4 +4,4 @@
 
 - [Exercise 2](https://khuongquynhlong.github.io/Biostat/RProgramming/Exercise-2.html)
 
-- [Exercise 7](https://khuongquynhlong.github.io/Biostat/RProgramming/Class_09Nov.html)
+- [Exercise 5](https://khuongquynhlong.github.io/Biostat/RProgramming/Exercise-5.html)

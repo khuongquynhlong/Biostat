@@ -7,4 +7,6 @@
 
 - [Exercise 2](https://khuongquynhlong.github.io/Biostat/RProgramming/Exercise-2.html)
 
+- [Exercise 5](https://khuongquynhlong.github.io/Biostat/RProgramming/Exercise-5.html)
+
 # [Project: Learning from data](https://github.com/khuongquynhlong/Biostat/tree/main/ProjectLFD)
