@@ -1,0 +1,98 @@
+---
+title: |  
+  Programming in R: Solutions
+subtitle: |
+  **Question 6 - Exam-part 1 (28/01/2022)**  
+author: "**Khuong Quynh Long (OC-2022)**"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  beamer_presentation:
+    theme: "AnnArbor"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+    slide_level: 2
+    highlight: kate
+urlcolor: orange
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+
+## Question 6
+
+Prepare a presentation of 5-10 slides using R markdown about the connection between the usage of seatbelt, the outcome of the accident and the severity of the injury.
+
+- A title slide
+- At least one slide with text
+- At least one slide with a figure
+- At least one slide with text and a figure
+
+
+## Introduction
+
+### Libraries and `nassCDS` data
+
+```{r}
+library(tidyverse)
+library(ggmosaic)
+library(DAAG)
+data(nassCDS)
+names(nassCDS)
+```
+
+## Slide with text
+
+The `nassCDS` data which is a US data from police-reported car crashes (1997-2002) in which there is a harmful event (people or property). Data are restricted to front-seat occupants, include only a subset of the variables recorded. More information about the dataset can be found using the following link: https://www.rdocumentation.org/packages/DAAG/versions/1.22/topics/nassCDS. The data is a part of the DAAG R package
+
+
+## Slide with figure
+
+Distribution of accident outcome over the seatbelt usage.
+
+```{r, fig.height = 3.5, fig.width = 6, echo = FALSE}
+nassCDS %>% mutate(injSeverity = as.factor(injSeverity)) %>%
+  na.omit() %>% ggplot() +
+  geom_mosaic(aes(x = product(dead, injSeverity), 
+                       color = injSeverity, fill = injSeverity),
+              alpha = 0.6, show.legend = F) +
+  scale_fill_brewer(palette = "Set1") +
+  scale_color_brewer(palette = "Set1") +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 6),
+    axis.title = element_text(size = 6)
+  )
+```
+
+
+## Slide with test and figure
+
+```{r, fig.height = 2, fig.width = 4, echo = FALSE}
+nassCDS %>% mutate(seatbelt = ifelse(seatbelt == "belted", 1, 0)) %>%
+  group_by(dead) %>% summarise(prop = mean(seatbelt)*100) %>%
+  ggplot(aes(x = dead, y = prop)) +
+  geom_col(width = 0.3, fill = "skyblue") +
+  scale_y_continuous(limits = c(0, 100)) +
+  geom_text(aes(label = round(prop, 1), vjust = -0.5)) +
+  theme_minimal() + 
+  theme(axis.title = element_blank())
+```
+
+Among people who survived from accident, 72.2% used seatbelt, whereas only 42.4% used seatbelt among those who died from accident.
+
+
+## Last slide
+
+![](Image/UHasselt.png){width=25% height=25%}
+
+
+### Thank you!
+
+
+
+
+
+
+
