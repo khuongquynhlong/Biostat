@@ -1,0 +1,50 @@
+dag {
+bb="0,0,1,1"
+"Color Blind" [pos="0.416,0.164"]
+"Lifestyle deteminant" [latent,pos="0.139,0.044"]
+"Lung Diseases" [pos="0.662,0.316"]
+"Mother Edu" [pos="0.642,0.136"]
+"Nutrition status" [latent,pos="0.587,0.612"]
+"School Results" [pos="0.494,0.156"]
+"Sport (hour*day)" [pos="0.569,0.070"]
+Age [pos="0.258,0.241"]
+BMI [pos="0.627,0.477"]
+FEV [outcome,pos="0.682,0.658"]
+Gender [pos="0.293,0.145"]
+Height [pos="0.492,0.516"]
+ParentSmoke [pos="0.171,0.353"]
+SES [pos="0.523,0.575"]
+Smoke [exposure,pos="0.296,0.657"]
+T1D [pos="0.755,0.417"]
+"Lifestyle deteminant" -> "School Results"
+"Lifestyle deteminant" -> "Sport (hour*day)"
+"Lifestyle deteminant" -> Smoke
+"Lung Diseases" -> FEV
+"Mother Edu" -> "Lifestyle deteminant"
+"Mother Edu" -> "Nutrition status"
+"Mother Edu" -> "School Results"
+"Mother Edu" -> SES
+"Mother Edu" -> Smoke
+"Nutrition status" -> FEV
+"School Results" -> Smoke
+"Sport (hour*day)" -> FEV
+Age -> "Lung Diseases"
+Age -> BMI
+Age -> FEV
+Age -> Height
+Age -> Smoke
+BMI -> FEV
+Gender -> "Color Blind"
+Gender -> BMI
+Gender -> FEV
+Gender -> Height
+Gender -> Smoke
+Height -> BMI
+Height -> FEV
+ParentSmoke -> Smoke
+SES -> "Nutrition status"
+SES -> Smoke
+Smoke -> "Lung Diseases"
+Smoke -> FEV
+T1D -> FEV
+}
