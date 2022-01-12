@@ -4,6 +4,8 @@
 
 - [Homework 2](https://khuongquynhlong.github.io/Biostat/LIMO/LIMO_HW2.html)
 
+- [Homework 3](https://github.com/khuongquynhlong/Biostat/blob/main/LIMO/LIMO_HW3.pdf)
+
 # [Programming in R](https://github.com/khuongquynhlong/Biostat/tree/main/RProgramming)
 
 - [Exercise 1](https://khuongquynhlong.github.io/Biostat/RProgramming/Exercise-1.html)
