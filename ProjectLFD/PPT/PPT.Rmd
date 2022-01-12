@@ -1,0 +1,377 @@
+---
+title:  |
+  # Project: Learning from Data   
+  # Effect of Smoking on the Pulmonary Function Among Children Aged 3 to 19 Years: A Cross-Sectional Study
+subtitle: |
+    Group 2:  
+    Deo Byabazaire  
+    Edmond Sacla Aide  
+    Gudeta Aga Hirko  
+    Mohammad Sazegar  
+    Quynh Long Khuong
+date: "January, 12^th^, 2022"
+output:
+  xaringan::moon_reader:
+    css: ['default', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 'slides.css']
+    # lib_dir: libs
+    nature:
+      titleSlideClass: ['inverse','middle','left',my-title-slide]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+      ratio: '16:9'
+---
+class: inverse middle center subsection
+
+```{r setup, include=FALSE, cache = FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(cache = TRUE, dev = 'svg', echo = TRUE, message = FALSE, warning = FALSE, fig.height=4, fig.width = 1.777777*4)
+
+library(tidyverse)
+library(magrittr)
+library(mice)
+library(VIM)
+library(psych)
+library(table1)
+library(car)
+
+
+## plot defaults
+theme_set(theme_minimal(base_size = 16, base_family = 'Fira Sans'))
+```
+
+# Outline
+
+### Introduction
+
+### Methods
+
+### Results
+
+### Conclusion
+
+---
+class: inverse middle center big-subsection
+
+# Introduction
+
+---
+# Introduction
+
+* Active and passive smoking have potential effects on pulmonary function and lung growth in children 
+
+* Main objective : The effect of smoking on the FEV of the children aged 3 to 19 years
+
+* Secondary objective : The effect of parental smoking on the FEV of the children
+
+---
+class: inverse middle center big-subsection
+
+# Methods
+
+---
+# Methods
+
+* **Study Design**
+  - Cross-sectional subset of a longitudinal observational survey
+  - Among East Boston area families (USA)
+  - One child per family
+  - Sample size: 639 (proposed 654) children
+
+* **Variables of Interest**
+  + Outcome : FEV
+  + Exposures : smoke and parental smoke
+  + Confounders :
+      - Main objective : age, gender, sport activity, mother education, and SES
+      - Secondary objective : age, mother education, and SES
+
+
+---
+# Methods
+
+* **Set of confounders were selected based on the Directed Acyclic Graphs**
+  - Causal relationships
+  - Confounding paths between exposure and outcome
+  - Unbiased estimates
+
+
+---
+background-image: url('resources/DAG.png')
+background-size: 90%
+
+
+# Directed Acyclic Graphs
+
+---
+# Methods
+
+* **Descriptive Statistics**
+  + Categorical variables : frequency and percentage
+  + Continuous variables
+      - Normally distributed : means (standard deviations - SD) 
+      - Skewed distributed : medians (interquartile range – IQR)
+  + Marginal normal distribution: histograms 
+  + Summarized by smoking type and overall
+
+* **Percentage of missing values**
+  + Complete case method to deal with missing values
+* **Typos and unrealistic values**
+
+
+---
+# Methods
+
+
+* **Modeling**
+  + Multiple linear regressions
+  + parameter estimate and 95% confidence interval
+  + two-sided hypotheses
+  + t-statistics
+  + p-values
+  + Significance level of 5%
+
+
+---
+# Methods
+
+**Main Objective Models**
+
+$$Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i}+\beta_{5}x_{5i}+\beta_{6}x_{6i} +\varepsilon_{i}$$
+
+$$Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i}+\beta_{5}x_{5i}+\beta_{6}x_{6i} + \color{red}{\beta_{7}x_{1i}x_{3i}} +\varepsilon_{i}$$
+
+$x_{1i}$: smoking status, $x_{2i}$: age, $x_{3i}$: gender,  $x_{4i}$: sport activities, $x_{5i}$: mother's education, $x_{6i}$: household SES.
+
+**Secondary Objective Model**
+
+$$Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i} +\varepsilon_{i}$$
+
+$x_{1i}$: parent smoking, $x_{2i}$: age, $x_{3i}$: mother education,  $x_{4i}$: household SES
+
+
+---
+# Methods
+
+* **Modeling Diagnostic**
+  + Normality assumption of error terms : normal probability plots (Q-Q plot)
+  + Constancy of error variance : residual versus regressors/fitted plot
+  + Linearity : residual versus regressors/fitted plot
+  + Outliers : residual plot
+  + Multicollinearity : Generalized Variance Inflation Factor
+      - $GVIF^{(1/(2∗DF))}$ criterion
+
+
+---
+class: inverse middle center big-subsection
+
+# Results
+
+---
+# Results
+
+**Descriptive statistic**
+
+```{r, include=FALSE, cache = FALSE}
+# Loading the Data and Data Cleaning
+df <- read.csv("Data/FullData_OC.csv", sep = ";", dec = ",") %>% as.tibble()
+names(df)[1] <- "ID"
+names(df)[6] <- "Height"
+# Change character variables to factor variables
+df %<>% mutate(SES = case_when(SES == "high" ~ "High",
+                               SES == "middle" ~ "Middle",
+                               SES == "low" ~ "Low",
+                               TRUE ~ SES),
+               SES = factor(SES, levels = c("Low", "Middle", "High")),
+               SchoolResults = case_when(SchoolResults == "poor" ~ "Poor",
+                                         SchoolResults == "average" ~ "Average",
+                                         SchoolResults == "good" ~ "Good",
+                                         TRUE ~ SchoolResults),
+               SchoolResults = factor(SchoolResults, levels = c("Poor", "Average", "Good")),
+               ColorBlind = case_when(ColorBlind == "no" ~ "No",
+                                      ColorBlind == "yes" ~ "Yes",
+                                      TRUE ~ ColorBlind),
+               ColorBlind = factor(ColorBlind, levels = c("No", "Yes")),
+               MotherEdu = case_when(MotherEdu == "secondary school" ~ "Secondary school",
+                                     MotherEdu == "high school" ~ "High school",
+                                     MotherEdu == "university" ~ "University",
+                                     TRUE ~ MotherEdu),
+               MotherEdu = factor(MotherEdu, levels = c("Secondary school", "High school", "University")))
+df$Height[df$Height < 0 | df$Height > 2] 
+df$Height[df$Height == 150] <- NA
+
+df2 <- df %>% mutate(Smoke = factor(Smoke, levels = c(0, 1), labels = c("Non-smoker", "Smoker")),
+                     Gender = factor(Gender, levels = c(0, 1), labels = c("Female", "Male")),
+                     ParentSmoke = factor(ParentSmoke, levels = c(0, 1), 
+                                          labels = c("Non-smoker", "Smoker")),
+                     T1D = factor(T1D, levels = c(0, 1), labels = c("No", "Yes")),
+                     LungDisease = factor(LungDisease, levels = c(0, 1), labels = c("No", "Yes")))
+```
+
+```{r,fig.height=3.8, fig.width = 2.5*4, echo=F}
+fev_smoking <- df2 %>% ggplot(aes(x = Smoke, y = FEV, color = Smoke, fill = Smoke)) +
+  geom_boxplot(alpha = 0.5, show.legend = F) +
+  labs(title = "A. FEV of children by smoking status") +
+  theme(axis.title.x = element_blank(),
+        plot.title = element_text(size = 12, face= "bold"))
+
+fev_parent_smoking <- df2 %>% ggplot(aes(x = ParentSmoke, y = FEV, color = ParentSmoke, fill = ParentSmoke)) +
+  geom_boxplot(alpha = 0.5, show.legend = F) +
+  labs(title = "B. FEV of children by parental smoking status") +
+  scale_fill_brewer(palette = "Set1") +
+  scale_color_brewer(palette = "Set1") +
+  theme(axis.title.x = element_blank(),
+        plot.title = element_text(size = 12, face= "bold"))
+
+gridExtra::grid.arrange(fev_smoking, fev_parent_smoking, ncol = 2)
+```
+
+<p style="font-size:20px">The mean FEV of children among smoking and non-smoking group were 3.28 (SD = 0.75) and 2.53 (SD = 0.82) liters, respectively</p>
+
+<p style="font-size:20px">The figures for children whose parents were smokers and non-smokers were 2.77 (SD = 0.93) and 2.57 (SD = 0.82) liters, respectively.</p>
+
+---
+# Results - Model assumptions
+
+<p style="font-size:20px">The model assumptions were satisfied for all models since there were no serious systematic deviation from the residuals plots, although small deviation at the extreme end of the QQ-plot of normality assumption checking was found.</p>
+
+
+```{r,fig.height=6, fig.width = 2.5*5, echo=F}
+df_complete <- df %>% select(FEV, Smoke, ParentSmoke, Age, Gender, MotherEdu, Sport, SES) %>% na.omit()
+# Unadjusted model
+m1_0 <- lm(FEV ~ Smoke, data = df_complete)
+# summary(m1_0)
+
+#----- Model 1
+# Adjusted model
+m1_1 <- lm(FEV ~ Smoke + Age + Gender + MotherEdu + Sport + SES, data = df_complete)
+#----- Model 2
+m1_2 <- lm(FEV ~ Smoke*Gender + Age  + MotherEdu + Sport + SES, data = df_complete)
+#----- Model 3
+# Unadjusted model
+m2_0 <- lm(FEV ~ ParentSmoke, data = df_complete)
+# summary(m2_0)
+
+# Adjusted model
+m2_1 <- lm(FEV ~ ParentSmoke + Age + MotherEdu + SES, data = df_complete)
+
+
+par(mfrow = c(2, 3))
+
+plot(m1_1$residuals ~ m1_1$fitted.values, xlab = "fitted" , ylab="residuals" , main = "Model 1: residual vs fitted")
+abline(h = 0, lty = 2, col = 2)
+plot(m1_2$residuals ~ m1_2$fitted.values, xlab = "fitted" , ylab="residuals" , main = "Model 2: residual vs fitted")
+abline(h = 0, lty = 2, col = 2)
+plot(m2_1$residuals ~ m2_1$fitted.values, xlab = "fitted" , ylab="residuals" , main = "Model 3: residual vs fitted")
+abline(h = 0, lty = 2, col = 2)
+
+qqnorm(m1_1$residuals,xlab = "" , ylab="", main = "Model 1: QQ" )
+qqline(m1_1$residuals)
+
+qqnorm(m1_2$residuals,xlab = "" , ylab="", main = "Model 2: QQ" )
+qqline(m1_2$residuals)
+
+qqnorm(m2_1$residuals,xlab = "" , ylab="", main = "Model 3: QQ")
+qqline(m2_1$residuals)
+```
+
+---
+# Results - Multicollinearity
+
+
+.pull-left[
+Smoking and FEV
+
+```{r, echo = F}
+cbind(vif(m1_1), `[GVIF^(1/(2*Df))]^2` = (vif(m1_1)[, 3])^2) %>% as.tibble(rownames= "Variable") %>% mutate_at(-1, function(x){round(x, 2)}) %>% select(-4) %>% knitr::kable(booktabs = TRUE)
+```
+]
+
+.pull-right[
+Parental smoking and FEV
+
+```{r, echo = F}
+cbind(vif(m2_1), `[GVIF^(1/(2*Df))]^2` = (vif(m2_1)[, 3])^2) %>% as.tibble(rownames= "Variable") %>% mutate_at(-1, function(x){round(x, 2)}) %>% select(-4) %>% knitr::kable(booktabs = TRUE)
+```
+]
+
+---
+# Results
+
+Eﬀect of Smoking on FEV of Children
+
+
+
+```{r, echo=F}
+cbind(summary(m1_1)$coefficients, confint(m1_1)) %>% as.tibble(rownames= "Variable") %>% mutate_at(-1, function(x){round(x, 3)}) %>% knitr::kable(booktabs = TRUE)
+```
+
+<p style="font-size:20px">Conditioning on gender, sport activities, mother education, and household SES, there was no significant association between smoking and FEV of children.</p>
+
+
+---
+# Results
+
+Further Investigation of the Eﬀect of Smoking on FEV of Children
+
+```{r, echo=F}
+cbind(summary(m1_2)$coefficients, confint(m1_2)) %>% as.tibble(rownames= "Variable") %>% mutate_at(-1, function(x){round(x, 3)}) %>%  knitr::kable(booktabs = TRUE)
+```
+
+
+<p style="font-size:20px">The eﬀect (slope) of smoking on FEV in males was higher by 0.30 liters (95%CI: 0.03 to 0.58) than that of females. This result was significant with p-value = 0.031.</p>
+
+
+
+---
+# Results
+
+Eﬀect of Parental Smoking on FEV of Children
+
+
+```{r, echo=F}
+cbind(summary(m2_1)$coefficients, confint(m2_1)) %>% as.tibble(rownames= "Variable") %>% mutate_at(-1, function(x){round(x, 3)}) %>% knitr::kable(booktabs = TRUE)
+
+```
+
+The eﬀect of parental smoking on FEV of children was not significant.
+
+
+---
+class: inverse middle center big-subsection
+
+# Conclusion
+
+---
+
+# Conclusion
+
+* The eﬀects of smoking and parental smoking on FEV of children were negligible in this study.
+
+* The gender diﬀerences in responses to smoking also should be further researched
+
+* Limitations
+  + One area in the United States
+  + Cross-sectional study design
+  + Information on levels of smoking and duration of smoking was not collected
+
+
+
+
+---
+class: inverse center big-subsection
+
+background-image: url('resources/Hasselt_people.jpg')
+background-size: cover
+
+
+# Thank you!
+
+
+
+
+
+
+
+
+

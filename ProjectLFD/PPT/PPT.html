@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>PPT.knit</title>
+    <meta charset="utf-8" />
+    <script src="PPT_files/header-attrs/header-attrs.js"></script>
+    <link href="PPT_files/remark-css/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: inverse, middle, left, my-title-slide, title-slide
+
+# <h1 id="project-learning-from-data">Project: Learning from Data</h1>
+<h1 id="effect-of-smoking-on-the-pulmonary-function-among-children-aged-3-to-19-years-a-cross-sectional-study">Effect of Smoking on the Pulmonary Function Among Children Aged 3 to 19 Years: A Cross-Sectional Study</h1>
+## <p>Group 2:<br />
+Deo Byabazaire<br />
+Edmond Sacla Aide<br />
+Gudeta Aga Hirko<br />
+Mohammad Sazegar<br />
+Quynh Long Khuong</p>
+### January, 12<sup>th</sup>, 2022
+
+---
+
+class: inverse middle center subsection
+
+
+
+# Outline
+
+### Introduction
+
+### Methods
+
+### Results
+
+### Conclusion
+
+---
+class: inverse middle center big-subsection
+
+# Introduction
+
+---
+# Introduction
+
+* Active and passive smoking have potential effects on pulmonary function and lung growth in children 
+
+* Main objective : The effect of smoking on the FEV of the children aged 3 to 19 years
+
+* Secondary objective : The effect of parental smoking on the FEV of the children
+
+---
+class: inverse middle center big-subsection
+
+# Methods
+
+---
+# Methods
+
+* **Study Design**
+  - Cross-sectional subset of a longitudinal observational survey
+  - Among East Boston area families (USA)
+  - One child per family
+  - Sample size: 639 (proposed 654) children
+
+* **Variables of Interest**
+  + Outcome : FEV
+  + Exposures : smoke and parental smoke
+  + Confounders :
+      - Main objective : age, gender, sport activity, mother education, and SES
+      - Secondary objective : age, mother education, and SES
+
+
+---
+# Methods
+
+* **Set of confounders were selected based on the Directed Acyclic Graphs**
+  - Causal relationships
+  - Confounding paths between exposure and outcome
+  - Unbiased estimates
+
+
+---
+background-image: url('resources/DAG.png')
+background-size: 90%
+
+
+# Directed Acyclic Graphs
+
+---
+# Methods
+
+* **Descriptive Statistics**
+  + Categorical variables : frequency and percentage
+  + Continuous variables
+      - Normally distributed : means (standard deviations - SD) 
+      - Skewed distributed : medians (interquartile range – IQR)
+  + Marginal normal distribution: histograms 
+  + Summarized by smoking type and overall
+
+* **Percentage of missing values**
+  + Complete case method to deal with missing values
+* **Typos and unrealistic values**
+
+
+---
+# Methods
+
+
+* **Modeling**
+  + Multiple linear regressions
+  + parameter estimate and 95% confidence interval
+  + two-sided hypotheses
+  + t-statistics
+  + p-values
+  + Significance level of 5%
+
+
+---
+# Methods
+
+**Main Objective Models**
+
+`$$Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i}+\beta_{5}x_{5i}+\beta_{6}x_{6i} +\varepsilon_{i}$$`
+
+`$$Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i}+\beta_{5}x_{5i}+\beta_{6}x_{6i} + \color{red}{\beta_{7}x_{1i}x_{3i}} +\varepsilon_{i}$$`
+
+`\(x_{1i}\)`: smoking status, `\(x_{2i}\)`: age, `\(x_{3i}\)`: gender,  `\(x_{4i}\)`: sport activities, `\(x_{5i}\)`: mother's education, `\(x_{6i}\)`: household SES.
+
+**Secondary Objective Model**
+
+`$$Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i} +\varepsilon_{i}$$`
+
+`\(x_{1i}\)`: parent smoking, `\(x_{2i}\)`: age, `\(x_{3i}\)`: mother education,  `\(x_{4i}\)`: household SES
+
+
+---
+# Methods
+
+* **Modeling Diagnostic**
+  + Normality assumption of error terms : normal probability plots (Q-Q plot)
+  + Constancy of error variance : residual versus regressors/fitted plot
+  + Linearity : residual versus regressors/fitted plot
+  + Outliers : residual plot
+  + Multicollinearity : Generalized Variance Inflation Factor
+      - `\(GVIF^{(1/(2∗DF))}\)` criterion
+
+
+---
+class: inverse middle center big-subsection
+
+# Results
+
+---
+# Results
+
+**Descriptive statistic**
+
+
+
+![](PPT_files/figure-html/unnamed-chunk-2-1.svg)&lt;!-- --&gt;
+
+&lt;p style="font-size:20px"&gt;The mean FEV of children among smoking and non-smoking group were 3.28 (SD = 0.75) and 2.53 (SD = 0.82) liters, respectively&lt;/p&gt;
+
+&lt;p style="font-size:20px"&gt;The figures for children whose parents were smokers and non-smokers were 2.77 (SD = 0.93) and 2.57 (SD = 0.82) liters, respectively.&lt;/p&gt;
+
+---
+# Results - Model assumptions
+
+&lt;p style="font-size:20px"&gt;The model assumptions were satisfied for all models since there were no serious systematic deviation from the residuals plots, although small deviation at the extreme end of the QQ-plot of normality assumption checking was found.&lt;/p&gt;
+
+
+![](PPT_files/figure-html/unnamed-chunk-3-1.svg)&lt;!-- --&gt;
+
+---
+# Results - Multicollinearity
+
+
+.pull-left[
+Smoking and FEV
+
+
+|Variable  |  GVIF| Df| [GVIF^(1/(2*Df))]^2|
+|:---------|-----:|--:|-------------------:|
+|Smoke     |  8.66|  1|                8.66|
+|Age       |  1.30|  1|                1.30|
+|Gender    |  1.01|  1|                1.01|
+|MotherEdu | 10.84|  2|                3.29|
+|Sport     |  1.04|  1|                1.04|
+|SES       | 19.29|  2|                4.39|
+]
+
+.pull-right[
+Parental smoking and FEV
+
+
+|Variable    |  GVIF| Df| [GVIF^(1/(2*Df))]^2|
+|:-----------|-----:|--:|-------------------:|
+|ParentSmoke |  1.13|  1|                1.13|
+|Age         |  1.22|  1|                1.22|
+|MotherEdu   | 10.77|  2|                3.28|
+|SES         | 11.31|  2|                3.36|
+]
+
+---
+# Results
+
+Eﬀect of Smoking on FEV of Children
+
+
+
+
+|Variable             | Estimate| Std. Error| t value| Pr(&gt;&amp;#124;t&amp;#124;)|  2.5 %| 97.5 %|
+|:--------------------|--------:|----------:|-------:|------------------:|------:|------:|
+|(Intercept)          |    0.141|      0.230|   0.616|              0.538| -0.310|  0.592|
+|Smoke                |   -0.053|      0.204|  -0.259|              0.796| -0.454|  0.348|
+|Age                  |    0.218|      0.009|  25.078|              0.000|  0.201|  0.235|
+|Gender               |    0.301|      0.043|   7.057|              0.000|  0.217|  0.385|
+|MotherEduHigh school |   -0.053|      0.226|  -0.236|              0.814| -0.497|  0.390|
+|MotherEduUniversity  |   -0.163|      0.225|  -0.723|              0.470| -0.606|  0.280|
+|Sport                |    0.050|      0.009|   5.386|              0.000|  0.032|  0.068|
+|SESMiddle            |    0.188|      0.304|   0.617|              0.538| -0.410|  0.785|
+|SESHigh              |    0.215|      0.310|   0.694|              0.488| -0.394|  0.824|
+
+&lt;p style="font-size:20px"&gt;Conditioning on gender, sport activities, mother education, and household SES, there was no significant association between smoking and FEV of children.&lt;/p&gt;
+
+
+---
+# Results
+
+Further Investigation of the Eﬀect of Smoking on FEV of Children
+
+
+|Variable             | Estimate| Std. Error| t value| Pr(&gt;&amp;#124;t&amp;#124;)|  2.5 %| 97.5 %|
+|:--------------------|--------:|----------:|-------:|------------------:|------:|------:|
+|(Intercept)          |    0.173|      0.229|   0.752|              0.452| -0.278|  0.623|
+|Smoke                |   -0.185|      0.213|  -0.871|              0.384| -0.603|  0.232|
+|Gender               |    0.271|      0.045|   6.038|              0.000|  0.183|  0.359|
+|Age                  |    0.218|      0.009|  25.104|              0.000|  0.201|  0.235|
+|MotherEduHigh school |   -0.047|      0.225|  -0.208|              0.835| -0.489|  0.395|
+|MotherEduUniversity  |   -0.155|      0.225|  -0.689|              0.491| -0.596|  0.287|
+|Sport                |    0.049|      0.009|   5.269|              0.000|  0.030|  0.067|
+|SESMiddle            |    0.174|      0.304|   0.572|              0.568| -0.422|  0.770|
+|SESHigh              |    0.198|      0.309|   0.639|              0.523| -0.409|  0.805|
+|Smoke:Gender         |    0.305|      0.141|   2.157|              0.031|  0.027|  0.582|
+
+
+&lt;p style="font-size:20px"&gt;The eﬀect (slope) of smoking on FEV in males was higher by 0.30 liters (95%CI: 0.03 to 0.58) than that of females. This result was significant with p-value = 0.031.&lt;/p&gt;
+
+
+
+---
+# Results
+
+Eﬀect of Parental Smoking on FEV of Children
+
+
+
+|Variable             | Estimate| Std. Error| t value| Pr(&gt;&amp;#124;t&amp;#124;)|  2.5 %| 97.5 %|
+|:--------------------|--------:|----------:|-------:|------------------:|------:|------:|
+|(Intercept)          |    0.192|      0.146|   1.316|              0.189| -0.094|  0.478|
+|ParentSmoke          |   -0.021|      0.062|  -0.335|              0.738| -0.143|  0.101|
+|Age                  |    0.228|      0.009|  25.435|              0.000|  0.211|  0.246|
+|MotherEduHigh school |   -0.090|      0.239|  -0.377|              0.706| -0.559|  0.379|
+|MotherEduUniversity  |   -0.187|      0.239|  -0.784|              0.433| -0.656|  0.281|
+|SESMiddle            |    0.334|      0.248|   1.349|              0.178| -0.152|  0.821|
+|SESHigh              |    0.362|      0.257|   1.412|              0.158| -0.142|  0.866|
+
+The eﬀect of parental smoking on FEV of children was not significant.
+
+
+---
+class: inverse middle center big-subsection
+
+# Conclusion
+
+---
+
+# Conclusion
+
+* The eﬀects of smoking and parental smoking on FEV of children were negligible in this study.
+
+* The gender diﬀerences in responses to smoking also should be further researched
+
+* Limitations
+  + One area in the United States
+  + Cross-sectional study design
+  + Information on levels of smoking and duration of smoking was not collected
+
+
+
+
+---
+class: inverse center big-subsection
+
+background-image: url('resources/Hasselt_people.jpg')
+background-size: cover
+
+
+# Thank you!
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

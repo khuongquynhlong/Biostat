@@ -1,0 +1,575 @@
+﻿ID;Age;FEV;Gender;Smoke;height;BMI;SES;ParentSmoke;Sport;SchoolResults;T1D;ColorBlind;MotherEdu;SportDays;LungDisease
+1;9;1,708;0;0;1,45;22,7;high;0;0;poor;0;no;university;0;0
+2;8;1,724;0;0;1,71;21,1;high;0;3;good;0;no;high school;2;0
+3;7;1,72;0;0;1,38;21,2;high;0;2;average;0;yes;high school;1;0
+4;9;1,558;1;0;1,35;22,9;high;0;3;average;0;no;university;2;0
+5;9;1,895;1;0;1,45;17,1;high;1;0;poor;0;no;university;0;0
+6;8;2,336;0;0;1,55;22,8;high;0;2;average;0;no;university;2;0
+7;6;1,919;0;0;1,47;21,7;high;0;2;NA;0;no;university;1;0
+8;6;1,415;0;0;1,42;19,8;high;0;0;NA;0;no;university;0;0
+9;8;1,987;0;0;1,49;22,7;high;1;3;good;0;no;university;2;0
+10;9;1,942;0;0;1,52;19,8;middle;0;1;good;0;no;secondary school;1;0
+11;6;1,602;0;0;1,35;17,4;high;0;0;NA;0;no;university;0;0
+12;8;1,735;1;0;1,37;21,2;high;0;1;average;0;no;high school;2;0
+13;8;2,193;0;0;1,49;19,6;high;0;0;average;0;no;high school;0;0
+14;8;2,118;1;0;1,54;24,1;middle;0;6;average;0;no;high school;3;0
+15;8;2,258;1;0;1,47;17,5;high;0;0;good;0;no;high school;0;0
+16;7;1,932;1;0;1,35;19,7;middle;0;1;average;0;no;high school;1;0
+17;5;1,472;1;0;1,27;17,1;high;0;0;NA;0;no;university;0;0
+18;6;1,878;0;0;1,35;20,9;high;0;3;NA;0;no;university;3;0
+19;9;2,352;1;0;150;21,1;high;0;1;good;0;no;university;1;0
+20;9;2,604;1;0;1,56;19,6;high;0;1;poor;0;no;high school;2;0
+21;5;1,4;0;0;1,24;21,9;high;0;0;NA;0;no;university;0;0
+22;5;1,256;0;0;1,33;18;High;0;1;NA;0;yes;university;1;0
+23;4;0,839;0;0;1,22;19;high;0;NA;NA;0;no;university;NA;0
+24;7;2,578;1;0;1,59;21,5;high;0;2;poor;0;no;high school;2;0
+25;9;2,988;0;0;1,65;22,7;middle;0;4;good;0;yes;secondary school;2;0
+26;3;1,404;1;0;1,31;21,8;high;0;NA;NA;0;no;high school;NA;0
+27;9;2,348;1;0;1,52;17,5;high;0;2;poor;0;no;university;2;0
+28;5;1,755;1;0;1,32;22,8;high;0;4;NA;0;no;university;2;0
+29;8;2,98;0;0;1,52;22,3;high;0;3;good;0;no;university;3;2
+30;9;2,1;0;0;1,52;20,5;high;1;1;good;0;no;high school;1;1
+31;5;1,282;0;0;1,24;21,1;high;0;1;NA;0;no;university;2;0
+32;9;3;1;0;1,66;19,3;high;0;1;average;0;no;university;2;1
+33;8;2,673;0;0;1,52;23,6;high;0;5;average;0;no;university;2;0
+34;7;2,093;0;0;1,46;18,8;high;0;2;poor;0;no;high school;2;0
+35;5;1,612;0;0;1,32;25,8;middle;0;1;NA;0;no;high school;2;0
+36;8;2,175;0;0;1,5;22,1;high;0;2;poor;0;no;university;1;1
+37;9;2,725;1;0;1,5;20,5;high;0;4;poor;0;no;university;2;1
+38;8;2,071;1;0;NA;22,7;high;0;2;poor;0;no;university;1;0
+39;8;1,547;1;0;1,45;20;high;0;1;average;0;no;university;1;0
+40;8;2,004;1;0;1,45;19,9;high;1;0;average;0;no;university;0;0
+41;9;3,135;0;0;1,52;20,9;high;0;2;poor;0;no;university;2;0
+42;8;2,42;1;0;1,5;21,6;middle;0;6;good;0;no;secondary school;3;0
+43;5;1,776;1;0;1,3;22,3;high;0;1;NA;0;no;university;1;0
+44;8;1,931;0;0;1,45;22,6;high;0;1;poor;0;no;university;1;0
+45;5;1,343;0;0;1,27;21,3;high;0;1;NA;0;no;university;2;0
+46;9;2,076;0;0;1,45;18,4;high;0;0;average;0;no;university;0;1
+47;7;1,624;1;0;1,37;22,1;high;0;2;good;0;no;university;1;0
+48;8;1,344;0;0;1,33;18,5;high;0;NA;good;0;no;university;NA;0
+49;6;1,65;1;0;1,4;19,4;high;0;1;NA;0;no;high school;2;0
+50;8;2,732;1;0;1,54;20,7;high;0;1;average;0;no;university;2;1
+51;5;2,017;1;0;1,38;19,3;high;0;0;NA;0;no;university;0;0
+52;9;2,797;0;0;NA;21,5;high;0;2;poor;0;no;high school;1;0
+53;9;3,556;1;0;1,57;19;middle;0;2;good;0;no;high school;1;0
+54;8;1,703;1;0;1,38;18,4;high;0;1;average;0;yes;high school;1;0
+55;6;1,634;1;0;1,37;21,6;middle;1;0;NA;0;no;high school;0;0
+56;9;2,57;1;0;1,45;19,1;high;0;8;poor;0;no;university;4;0
+57;9;3,016;0;0;1,59;19,8;middle;0;0;good;0;no;university;0;0
+58;7;2,419;0;0;1,52;17,2;middle;0;1;good;0;no;secondary school;2;0
+59;4;1,569;0;0;1,27;23,1;middle;0;NA;NA;0;no;secondary school;NA;0
+60;8;1,698;0;0;1,46;20,6;high;0;1;average;0;no;university;2;0
+61;8;2,123;1;0;1,52;21,3;high;0;0;good;0;yes;university;0;0
+62;8;2,481;0;0;1,52;19,3;high;0;0;average;0;no;university;0;1
+63;6;1,481;0;0;1,3;19,5;middle;0;1;NA;0;no;university;1;0
+64;4;1,577;0;0;1,24;20,6;high;0;NA;NA;0;no;university;NA;0
+65;8;1,94;1;0;1,5;17,5;middle;0;1;good;0;no;high school;1;0
+66;6;1,747;1;0;1,46;20,7;high;0;1;NA;0;no;university;1;0
+67;9;2,069;1;0;1,47;20,3;high;0;8;average;0;no;university;4;0
+68;7;1,631;0;0;1,41;24,1;high;0;0;average;0;no;university;0;0
+69;5;1,536;0;0;1,32;19;high;0;0;NA;0;no;university;0;0
+70;9;2,56;0;0;1,54;23,2;high;0;2;good;0;no;high school;1;0
+71;8;1,962;1;0;1,45;22,2;high;0;0;poor;0;no;high school;0;0
+72;8;2,531;0;0;1,47;20,4;high;0;6;good;0;no;university;2;0
+73;9;2,715;1;0;1,52;22,2;middle;0;0;average;0;no;university;0;0
+74;9;2,457;1;0;1,5;23;high;0;4;poor;0;no;university;3;0
+75;9;2,09;1;0;1,51;19,2;high;0;5;average;0;yes;university;2;0
+76;7;1,789;1;0;1,42;20;high;0;0;good;0;no;university;0;0
+77;5;1,858;1;0;1,35;18,2;high;0;0;NA;0;no;university;0;0
+78;5;1,452;1;0;1,3;22,5;high;0;1;NA;0;no;university;1;0
+79;9;3,842;1;0;1,75;18,2;middle;0;7;good;0;no;high school;2;0
+80;6;1,719;0;0;1,35;21,8;high;0;1;NA;0;no;university;2;0
+81;7;2,111;0;0;1,45;18,6;high;0;3;poor;0;yes;university;3;0
+82;6;1,695;0;0;1,35;18,6;high;1;3;NA;0;no;university;2;0
+83;8;2,211;1;0;1,6;20,8;high;0;0;average;0;no;university;0;0
+84;8;1,794;1;0;1,38;21,1;middle;0;0;average;0;no;high school;0;0
+85;7;1,917;0;0;1,47;22,8;high;0;2;poor;0;no;university;1;0
+86;8;2,144;0;0;1,6;21,7;high;0;0;poor;0;no;high school;0;0
+87;7;1,253;1;0;1,32;20,5;high;0;1;poor;0;no;high school;2;0
+88;9;2,659;1;0;1,56;20;high;0;1;average;0;no;high school;1;0
+89;5;1,58;1;0;1,33;17,6;middle;0;0;NA;0;no;high school;0;0
+90;9;2,126;1;0;1,57;19,4;middle;0;0;average;0;no;university;0;0
+91;9;3,029;0;0;1,56;20;middle;0;0;poor;0;no;university;0;0
+92;9;2,964;1;0;1,64;25,6;high;0;2;average;0;no;university;2;0
+93;7;1,611;1;0;1,46;18,6;high;1;2;poor;0;no;university;1;0
+94;8;2,215;0;0;1,52;19,9;high;0;1;poor;0;no;university;2;0
+95;8;2,388;0;0;1,52;23,7;middle;1;9;good;0;no;secondary school;3;0
+96;9;2,196;1;0;1,55;20,3;high;0;2;good;0;no;university;1;0
+97;9;1,751;1;0;1,47;20,3;high;0;1;average;0;no;university;2;0
+98;9;2,165;1;0;1,56;16;high;0;1;average;0;no;high school;2;0
+99;7;1,682;1;0;1,4;23,6;high;0;1;average;0;no;university;1;0
+100;8;1,523;1;0;1,4;21,3;high;0;0;poor;0;no;university;0;0
+101;8;1,292;0;0;1,32;22,1;high;0;1;average;0;no;university;1;0
+102;7;1,649;1;0;1,37;18,1;high;0;0;good;0;no;university;0;0
+103;9;2,588;1;0;1,6;21,3;middle;0;1;average;1;no;university;2;0
+104;4;0,796;1;0;1,19;19,2;high;1;NA;NA;0;no;university;NA;0
+105;9;2,574;0;0;1,54;20,2;high;0;2;average;0;no;high school;2;0
+106;6;1,979;1;0;1,42;19,5;high;0;5;NA;0;no;university;3;0
+107;8;2,354;1;0;1,49;19,1;high;0;5;good;0;no;high school;3;0
+108;6;1,718;1;0;1,4;22;middle;0;6;NA;0;no;university;3;0
+109;7;1,742;0;0;1,49;21;high;0;2;average;0;no;university;1;0
+110;7;1,603;0;0;1,3;21,8;high;1;1;average;0;no;university;1;0
+111;8;2,639;0;0;1,51;21,7;high;0;2;average;0;no;university;1;0
+112;7;1,829;0;0;1,37;23,3;high;0;2;average;0;no;university;2;0
+113;7;2,084;1;0;1,47;18,9;high;0;0;average;0;no;university;0;0
+114;7;2,22;1;0;1,47;22,1;high;0;2;average;0;no;university;2;0
+115;7;1,473;0;0;1,33;18,9;high;0;3;good;0;no;high school;2;0
+116;8;2,341;0;0;1,54;23,4;high;0;2;poor;0;no;university;2;0
+117;7;1,698;0;0;1,38;20,5;high;0;4;average;0;no;high school;2;0
+118;5;1,196;0;0;1,18;23,4;high;0;3;NA;0;no;university;2;0
+119;8;1,872;0;0;1,44;16,7;high;0;7;poor;0;no;university;3;0
+120;7;2,219;1;0;1,4;18,7;high;0;0;average;0;no;university;0;0
+121;9;2,42;1;0;1,45;18,6;middle;0;2;average;0;yes;university;1;0
+122;7;1,827;0;0;1,38;17,4;high;0;1;good;0;no;university;1;0
+123;7;1,461;0;0;1,37;20,5;high;0;1;average;0;yes;university;1;0
+124;6;1,338;1;0;1,35;21,5;high;1;0;NA;0;yes;university;0;0
+125;8;2,09;1;0;1,45;22,3;middle;0;1;good;0;no;high school;1;0
+126;8;1,697;0;0;1,5;19,8;high;1;2;average;0;no;university;2;0
+127;8;1,562;1;0;1,4;21,5;high;0;1;average;0;no;university;1;0
+128;9;2,04;0;0;1,41;19;high;0;3;good;0;no;university;3;0
+129;7;1,609;0;0;1,31;18,3;high;0;0;poor;0;no;university;0;0
+130;8;2,458;0;0;1,55;18,6;middle;0;1;average;0;no;university;2;0
+131;9;2,65;1;0;1,61;18;high;1;3;good;0;no;university;2;0
+132;8;1,429;1;0;1,46;20,7;high;0;2;good;0;no;university;1;0
+133;8;1,675;1;0;1,35;20,6;middle;0;2;good;0;no;high school;2;0
+134;9;1,947;0;0;1,44;19,6;high;0;5;good;0;no;high school;3;0
+135;8;2,069;1;0;1,37;19,7;high;0;0;good;0;no;university;0;0
+136;6;1,572;1;0;1,32;17,6;high;0;2;NA;0;no;high school;1;1
+137;6;1,348;1;0;1,35;15,7;high;1;2;NA;0;yes;university;1;0
+138;8;2,288;0;0;1,56;19,8;high;0;1;average;0;no;university;2;0
+139;9;1,773;1;0;1,49;18,2;high;0;1;good;0;no;university;2;0
+140;5;0,791;0;0;1,32;23,4;high;0;4;NA;0;no;university;3;0
+141;7;1,905;1;0;1,47;21,2;high;0;3;average;0;no;high school;2;0
+142;9;2,463;0;0;1,55;19;high;0;3;average;0;no;university;2;0
+143;6;1,431;1;0;1,3;19;high;0;8;NA;0;no;university;3;1
+144;9;2,631;0;0;1,57;19,4;high;0;2;good;0;no;university;1;1
+145;9;3,114;1;0;1,64;19;middle;0;1;average;0;no;university;2;0
+146;9;2,135;1;0;1,49;21,3;high;0;2;average;0;no;university;2;0
+147;6;1,527;1;0;1,33;22,8;high;0;1;NA;0;yes;university;1;0
+148;8;2,293;0;0;1,47;21;high;0;2;good;0;no;high school;1;0
+149;9;3,042;0;0;1,68;18,7;high;0;0;poor;0;no;university;0;0
+150;8;2,927;1;0;1,61;22,3;high;0;2;poor;0;no;high school;2;0
+151;8;2,665;0;0;1,63;24,1;high;0;4;good;0;no;university;2;0
+152;9;2,301;1;0;1,49;21;high;0;1;poor;0;no;high school;1;0
+153;9;2,46;1;0;1,63;22,3;high;1;1;good;0;no;university;1;0
+154;9;2,592;0;0;1,54;20;high;0;6;average;0;no;university;2;0
+155;7;1,75;0;0;1,4;18,6;high;0;1;poor;0;no;university;1;0
+156;8;1,759;1;0;1,35;19,3;high;0;2;average;0;no;university;1;0
+157;6;1,536;1;0;1,22;17,6;middle;1;0;NA;0;no;high school;0;1
+158;9;2,259;0;0;1,49;18,2;middle;0;4;good;0;no;university;2;0
+159;9;2,048;0;0;1,64;21,3;high;0;4;poor;0;no;university;2;0
+160;9;2,571;1;0;1,54;18;high;1;2;good;0;no;high school;2;0
+161;7;2,046;1;0;1,42;20,3;high;0;0;average;1;no;university;0;0
+162;8;1,78;0;0;1,49;22,1;high;0;0;poor;0;no;university;0;0
+163;5;1,552;0;0;1,37;16,5;high;0;1;NA;0;no;high school;1;0
+164;8;1,953;0;0;1,47;24,9;high;1;2;average;0;no;university;2;0
+165;9;2,893;1;0;1,64;18,4;high;0;7;average;0;no;university;2;0
+166;6;1,713;1;0;1,28;19,4;middle;0;0;NA;0;no;secondary school;0;0
+167;9;2,851;0;0;1,52;20,5;high;0;3;average;0;yes;high school;2;0
+168;6;1,624;1;0;1,31;23,2;middle;0;0;NA;0;no;university;0;0
+169;8;2,631;1;0;1,5;21;high;0;2;average;0;no;university;1;0
+170;5;1,819;1;0;1,35;27;high;0;0;NA;1;no;high school;0;0
+171;7;1,658;1;0;1,35;18,6;high;0;2;poor;0;no;university;2;0
+172;7;2,158;1;0;1,36;19,5;high;1;0;good;0;no;high school;0;0
+173;4;1,789;1;0;1,32;16,2;high;0;NA;NA;0;no;university;NA;0
+174;9;3,004;0;0;1,63;20,9;middle;0;0;poor;0;no;high school;0;0
+175;8;2,503;1;0;1,6;20,7;high;0;1;average;0;no;university;1;0
+176;9;1,933;0;0;1,47;19,9;high;0;0;poor;0;no;high school;0;1
+177;9;2,091;0;0;1,49;19,3;high;0;0;average;0;no;high school;0;0
+178;9;2,316;0;0;1,51;23,6;middle;0;5;average;0;yes;university;2;0
+179;5;1,704;0;0;1,3;18,1;high;0;2;NA;0;no;university;1;0
+180;9;1,606;0;0;1,46;17,4;high;0;3;good;0;no;university;3;0
+181;7;1,165;1;0;1,19;18,3;high;0;1;poor;0;no;university;1;0
+182;6;2,102;0;0;1,41;17,9;high;0;2;NA;0;no;university;2;0
+183;9;2,32;0;0;1,45;19,2;high;1;3;poor;0;no;university;3;0
+184;9;2,23;1;0;1,55;18,6;middle;0;4;good;0;yes;university;3;0
+185;9;1,716;1;0;1,41;21,2;high;0;0;average;0;no;university;0;0
+186;7;1,79;1;0;1,36;20,3;high;0;0;average;0;no;university;0;0
+187;5;1,146;0;0;1,27;20,3;high;0;1;NA;0;no;university;1;0
+188;8;2,187;0;0;1,56;20,4;high;0;2;poor;0;no;high school;1;0
+189;9;2,717;1;0;1,56;18;high;0;0;average;0;no;university;0;0
+190;7;1,796;1;0;1,4;17,3;high;0;0;average;0;no;high school;0;0
+191;8;1,335;0;0;1,44;18,8;high;0;3;poor;0;no;university;2;0
+192;9;2,119;1;0;1,45;17,8;middle;0;1;good;0;no;high school;1;1
+193;6;1,666;1;0;1,32;16,9;high;0;0;NA;0;no;high school;0;0
+194;6;1,826;1;0;1,33;21,3;middle;0;1;NA;0;no;university;1;0
+195;8;2,709;0;0;1,59;18,6;high;0;2;average;0;no;university;2;0
+196;9;2,871;1;0;1,65;21,5;high;0;1;poor;0;no;university;1;0
+197;5;1,092;0;0;1,27;21,9;high;0;0;NA;0;no;university;0;0
+198;6;2,262;1;0;1,46;20,2;high;0;0;NA;1;no;high school;0;0
+199;6;2,104;1;0;1,44;16,3;high;1;2;NA;0;no;university;2;0
+200;9;2,166;0;0;1,46;24,5;high;0;4;average;0;no;university;2;0
+201;7;1,69;0;0;1,37;25,2;middle;0;2;average;0;no;university;2;0
+202;9;2,973;1;0;1,51;18,9;middle;0;3;average;0;no;university;2;0
+203;8;2,145;0;0;1,51;22,4;high;0;4;average;0;no;university;3;0
+204;5;1,971;1;0;1,47;23,2;high;0;3;NA;0;no;university;3;0
+205;7;2,095;0;0;1,45;19,1;high;0;4;poor;0;no;university;3;0
+206;6;1,697;0;0;1,4;23;middle;1;2;NA;0;no;university;1;0
+207;9;2,455;0;0;1,52;21,8;high;0;0;average;0;no;university;0;0
+208;7;1,92;1;0;1,44;18,1;high;0;2;average;0;no;university;2;0
+209;9;2,164;1;0;1,52;20,1;high;1;0;average;0;no;university;0;0
+210;9;2,13;0;0;1,5;22;high;0;0;poor;0;no;university;0;0
+211;8;2,993;0;0;1,6;18,7;high;0;3;good;0;no;university;2;0
+212;9;2,529;0;0;1,5;19,7;middle;0;1;good;0;no;high school;1;0
+213;7;1,726;0;0;1,35;18,7;high;0;2;poor;0;no;university;1;0
+214;9;2,442;0;0;1,56;19,2;high;0;0;average;0;no;university;0;1
+215;4;1,102;0;0;1,22;21,2;high;0;NA;NA;0;no;high school;NA;0
+216;9;2,056;0;0;1,6;20,9;high;0;1;average;0;no;university;1;0
+217;5;1,808;1;0;1,41;23,7;high;0;3;NA;0;no;university;3;0
+218;8;2,305;0;0;1,64;24;high;0;5;good;0;no;high school;2;0
+219;9;1,969;0;0;1,5;20,2;high;0;1;average;0;no;university;1;1
+220;8;1,556;0;0;1,49;20;middle;0;2;good;0;no;university;2;0
+221;3;1,072;0;0;1,17;17,2;high;0;NA;NA;0;no;university;NA;0
+222;9;2,042;1;0;1,57;20,9;high;0;0;average;0;no;university;0;1
+223;8;1,512;0;0;1,35;19,4;high;0;2;good;0;no;high school;1;0
+224;6;1,423;1;0;1,26;21,6;high;0;2;NA;0;yes;university;2;0
+225;9;3,681;1;0;1,73;16,9;middle;0;4;average;0;no;high school;2;0
+226;8;1,991;1;0;1,51;20,1;high;0;2;poor;0;no;university;1;0
+227;8;1,897;1;0;1,41;19,2;middle;1;3;good;0;no;high school;2;0
+228;7;1,37;0;0;1,4;18,6;middle;0;0;good;0;no;high school;0;0
+229;6;1,338;0;0;1,31;20,4;middle;0;2;NA;0;no;university;1;0
+230;8;2,016;1;0;1,42;19,2;high;0;2;average;0;no;university;1;0
+231;9;2,639;0;0;1,6;24,1;high;0;5;average;0;no;university;3;0
+232;4;1,389;0;0;1,22;19,3;high;0;NA;NA;0;no;university;NA;0
+233;7;1,612;1;0;1,44;22;high;0;4;average;0;yes;university;2;0
+234;8;2,135;0;0;1,5;19,7;middle;0;1;good;0;no;university;2;0
+235;8;2,681;1;0;1,54;21,4;high;0;2;good;0;no;university;2;0
+236;9;3,223;0;0;1,65;19,3;high;0;3;poor;0;no;university;2;0
+237;6;1,796;0;0;1,4;19,6;high;0;3;NA;0;no;high school;3;0
+238;8;2,01;1;0;1,4;20,6;middle;1;2;average;0;no;high school;1;0
+239;6;1,523;0;0;1,3;17,2;middle;0;3;NA;0;no;university;2;0
+240;8;1,744;1;0;1,33;20,6;high;1;1;average;0;no;university;2;0
+241;9;2,485;0;0;1,63;18,9;high;1;1;average;0;no;university;1;0
+242;8;2,335;0;0;1,5;18;high;0;0;good;0;no;university;0;1
+243;7;1,415;0;0;1,36;19,6;high;0;0;average;0;no;university;0;0
+244;9;2,076;1;0;1,54;19,9;middle;0;1;average;0;no;university;1;0
+245;8;2,435;1;0;1,51;17,6;high;0;4;poor;0;no;university;2;0
+246;7;1,728;0;0;1,44;23,5;high;1;0;poor;0;no;university;0;0
+247;9;2,85;0;0;1,6;19,5;middle;0;2;good;0;no;high school;1;0
+248;8;1,844;0;0;1,44;19,1;high;0;4;average;0;no;university;2;0
+249;9;1,754;0;0;1,56;25,9;high;0;2;average;0;no;university;2;0
+250;6;1,343;0;0;1,32;21,1;high;0;1;NA;0;no;university;2;0
+251;8;2,303;1;0;1,45;18,9;high;0;1;poor;0;no;university;2;0
+252;9;2,246;1;0;1,61;18,1;middle;0;1;average;0;no;university;2;0
+253;8;2,476;0;0;1,6;24,8;high;0;1;good;0;no;university;2;0
+254;9;3,239;1;0;1,65;20,7;high;0;4;average;0;no;university;3;0
+255;9;2,457;1;0;1,56;20,9;high;0;5;average;0;no;university;2;0
+256;8;2,382;0;0;1,57;20,2;high;0;3;good;0;no;high school;2;0
+257;7;1,64;0;0;1,4;22,7;high;0;3;average;0;no;university;2;0
+258;5;1,589;0;0;1,3;20,6;high;0;0;NA;0;no;university;0;0
+259;7;2,056;1;0;1,37;21,5;high;0;2;average;0;no;university;1;0
+260;8;2,226;1;0;1,45;19,8;high;0;3;average;0;no;university;3;0
+261;9;1,886;0;0;1,42;25;high;0;2;good;0;no;university;2;0
+262;9;2,833;1;0;1,56;21,3;high;0;5;poor;0;no;university;3;0
+263;6;1,715;1;0;1,35;20,3;middle;0;0;NA;0;no;university;0;0
+264;8;2,631;1;0;1,5;20,5;middle;0;0;good;0;no;high school;0;0
+265;7;2,55;1;0;1,42;17,6;high;0;0;average;0;no;high school;0;0
+266;9;1,912;0;0;1,5;19,7;middle;0;1;good;0;no;high school;1;0
+267;7;1,877;0;0;1,33;17,7;high;0;0;poor;0;no;university;0;1
+268;7;1,935;0;0;1,33;20,4;middle;0;2;good;0;no;university;1;0
+269;5;1,539;0;0;1,27;18,9;high;0;1;NA;0;no;high school;1;0
+270;9;2,803;1;0;1,51;21;high;0;1;average;0;no;university;1;0
+271;9;2,923;1;0;1,63;20,8;high;0;4;poor;0;no;university;2;0
+272;8;2,358;0;0;1,55;18,8;high;0;1;average;0;no;university;1;0
+273;8;2,094;1;0;1,46;15,3;high;0;1;poor;0;no;university;1;0
+274;9;1,855;1;0;1,52;24,3;high;0;2;average;0;yes;university;2;0
+275;6;1,535;0;0;1,4;20,6;high;0;0;NA;0;no;university;0;0
+276;7;2,135;1;0;1,42;23,6;high;1;0;average;0;no;university;0;0
+277;5;1,93;1;0;1,3;23,5;high;0;1;NA;0;no;university;2;0
+278;9;2,182;0;0;1,51;20,8;high;0;4;average;0;no;high school;2;0
+279;5;1,359;1;0;1,28;19,5;high;1;3;NA;0;no;university;3;0
+280;7;2,002;0;0;1,46;20,6;high;0;2;average;0;no;university;1;0
+281;6;1,699;1;0;1,37;18,5;high;0;6;NA;0;no;university;3;0
+282;8;2,5;1;0;1,45;22,4;high;0;6;poor;0;no;university;2;1
+283;7;2,366;0;0;1,47;20,6;high;0;1;poor;0;no;high school;1;0
+284;8;2,069;0;0;1,52;17,5;high;0;4;poor;0;no;high school;2;0
+285;4;1,418;0;0;1,24;20,5;middle;1;NA;NA;0;no;high school;NA;0
+286;8;2,333;0;0;1,45;22,8;high;0;2;good;0;yes;university;1;0
+287;5;1,514;1;0;1,32;18,4;high;0;0;NA;0;no;university;0;0
+288;8;1,758;0;0;1,32;18;high;1;1;average;0;no;university;2;0
+289;7;2,535;1;0;1,51;16,7;high;1;8;good;0;no;university;3;0
+290;7;2,564;0;0;1,47;25;Middle;0;0;average;0;no;high school;0;0
+291;9;2,487;0;0;1,63;23,3;high;0;0;good;0;no;university;0;0
+292;9;1,591;0;0;1,45;19,8;high;0;1;average;0;no;university;1;0
+293;8;1,624;1;0;1,35;16,5;high;1;1;average;0;no;university;2;0
+294;9;2,798;1;0;1,57;22,7;high;1;2;average;0;no;university;2;0
+295;6;1,691;1;0;1,35;21;high;0;3;NA;0;no;university;3;0
+296;8;1,999;0;0;1,44;24,2;high;0;4;average;0;no;university;2;0
+297;9;1,869;1;0;1,45;16,5;high;0;3;good;0;yes;university;2;0
+298;4;1,004;1;0;1,22;16,9;middle;0;NA;NA;0;no;university;NA;0
+299;6;1,427;1;0;1,26;20,1;middle;1;1;NA;0;no;high school;2;0
+300;7;1,826;1;0;1,3;17,9;high;0;6;poor;0;yes;university;3;0
+301;9;2,688;0;0;1,51;18,3;high;0;1;average;0;no;high school;1;0
+302;8;1,657;1;0;1,42;18,4;middle;0;0;good;0;no;university;0;0
+303;6;1,672;0;0;1,37;19,2;high;0;0;NA;0;no;university;0;0
+304;8;2,015;0;0;1,46;17,6;high;1;1;average;0;no;university;2;0
+305;7;2,371;0;0;1,41;22,1;high;0;0;average;0;no;university;0;0
+306;5;2,115;1;0;1,27;23,8;middle;1;1;NA;0;no;high school;1;0
+307;8;2,328;0;0;1,52;21,4;middle;0;2;good;0;no;high school;1;0
+308;7;1,495;0;0;1,45;23,3;high;0;0;average;0;no;university;0;0
+309;11;2,884;1;0;1,75;20,4;high;0;2;average;0;no;university;1;0
+310;10;2,328;1;0;1,63;18,8;high;0;0;average;0;no;university;0;0
+311;14;3,381;1;0;1,6;20,4;middle;0;4;good;0;no;university;2;0
+312;11;2,17;0;0;1,47;20,3;high;0;1;average;0;no;university;1;0
+313;11;3,47;1;0;1,69;20,8;high;0;1;poor;0;no;university;2;0
+314;12;3,058;0;0;1,54;15,2;middle;0;2;good;0;no;high school;1;0
+315;10;1,811;1;0;1,45;20,2;high;0;0;good;0;no;university;0;0
+316;11;2,524;1;0;1,63;21,6;Middle;0;0;average;0;no;university;0;0
+317;10;2,642;0;0;1,55;22,3;middle;0;1;poor;0;no;university;1;0
+318;14;3,741;1;0;1,74;20,8;high;1;1;average;0;no;high school;1;0
+319;13;4,336;1;0;1,77;19,5;high;0;2;average;0;no;university;2;0
+320;14;4,842;1;0;1,83;19,6;high;0;11;average;0;no;high school;4;0
+321;12;4,55;1;0;1,8;19,7;high;0;4;average;0;no;high school;3;0
+322;12;2,841;0;0;1,6;25,3;high;0;15;average;0;yes;university;5;0
+323;10;3,166;0;0;1,56;20,9;high;0;3;average;0;no;university;2;0
+324;13;3,816;0;0;1,61;21,6;middle;0;1;good;0;no;university;1;0
+325;10;2,561;1;0;1,57;19;middle;0;0;good;0;no;university;0;0
+326;11;3,654;0;0;1,65;22,8;high;0;10;good;0;no;university;4;0
+327;10;2,481;1;0;1,55;18,6;high;0;5;good;0;no;university;3;0
+328;11;2,665;0;0;1,6;23,4;high;0;9;good;0;no;university;3;0
+329;10;3,203;1;0;1,68;21;high;0;5;average;0;no;university;2;0
+330;13;3,549;1;0;1,73;20,8;middle;1;2;good;0;no;high school;1;0
+331;11;3,222;1;0;1,83;18,5;high;1;2;average;0;no;university;2;0
+332;10;3,111;1;0;1,68;17,1;high;1;1;poor;0;no;university;1;0
+333;11;3,49;0;0;1,7;24,2;high;1;0;average;0;no;high school;0;0
+334;13;3,147;0;0;1,63;21,5;middle;0;6;good;0;no;university;2;0
+335;10;2,52;0;0;1,54;20,5;high;1;3;average;0;no;university;2;0
+336;10;2,292;1;0;1,6;22,4;high;0;1;average;0;no;high school;2;0
+337;12;2,889;0;0;1,63;18,9;middle;0;1;good;0;yes;university;2;0
+338;10;2,246;1;0;1,54;21,2;high;0;0;good;0;no;university;0;0
+339;10;1,937;1;0;1,57;20;middle;0;1;poor;0;no;university;1;0
+340;10;2,646;1;0;1,52;21,5;high;0;3;average;0;no;university;2;0
+341;11;2,957;1;0;1,64;21,1;high;0;3;average;0;no;university;3;0
+342;11;4,007;1;0;1,7;24,1;high;0;2;average;0;no;university;1;0
+343;11;2,386;0;0;1,56;19,2;high;0;6;good;0;no;university;2;0
+344;10;3,251;1;0;1,68;19,2;high;0;0;poor;0;no;university;0;0
+345;11;2,762;0;0;1,52;19,6;high;0;2;average;0;no;university;2;0
+346;11;3,011;0;0;1,63;19,7;high;0;6;good;0;no;high school;2;0
+347;13;4,305;1;0;1,74;20;high;0;0;average;0;no;university;0;0
+348;13;3,906;1;0;1,7;18,1;high;0;1;poor;0;no;university;2;0
+349;11;3,583;1;0;1,7;24,4;high;0;0;average;0;yes;university;0;0
+350;11;3,236;0;0;1,68;19,1;high;0;5;average;0;no;university;2;0
+351;14;3,436;1;0;1,59;18,2;high;0;2;poor;0;no;high school;1;0
+352;11;3,058;1;0;1,55;20,8;high;0;1;poor;0;no;university;1;0
+353;10;3,007;1;0;1,57;18,9;high;0;2;average;1;no;university;2;0
+354;10;3,489;1;0;1,69;18;high;0;2;average;0;no;university;1;0
+355;10;2,864;0;0;1,52;23,6;middle;0;4;good;0;no;high school;3;0
+356;13;2,819;0;0;1,57;21,3;middle;1;1;good;0;no;university;2;0
+357;10;2,25;0;0;1,47;21,7;middle;1;0;average;0;no;university;0;0
+358;14;4,683;1;0;1,74;18,7;high;0;15;average;0;no;high school;4;0
+359;10;2,352;1;0;1,56;23,8;middle;0;2;good;0;no;university;1;0
+360;11;3,108;1;0;1,64;21,3;high;0;0;good;0;no;university;0;0
+361;13;3,994;1;0;1,7;18,6;middle;0;3;good;0;no;university;3;0
+362;12;4,393;1;0;1,74;20,2;high;0;3;good;0;no;university;2;0
+363;10;2,592;1;0;1,65;20,7;high;0;2;average;0;no;university;2;0
+364;13;3,193;1;0;1,78;18,3;high;0;2;average;0;no;university;2;0
+365;11;2,346;0;0;1,5;20,9;high;0;1;average;0;no;university;2;0
+366;11;3,515;1;0;1,71;22,2;high;0;7;average;1;no;university;2;0
+367;11;2,754;0;0;1,66;20,3;high;0;4;good;0;no;high school;2;0
+368;10;2,72;1;0;1,66;22,3;high;0;2;poor;0;no;university;1;0
+369;11;2,463;1;0;1,64;20,4;middle;0;0;good;0;no;high school;0;0
+370;11;2,633;0;0;1,57;20,3;high;1;1;average;0;no;high school;2;0
+371;10;3,048;0;0;1,66;21;high;0;6;poor;0;no;university;2;0
+372;11;3,111;1;0;1,71;17;high;0;9;average;0;no;university;3;0
+373;13;3,745;0;0;1,73;20,6;high;0;3;average;0;no;university;2;1
+374;10;2,094;1;0;1,49;22,9;high;0;1;good;0;no;university;1;0
+375;10;3,183;0;0;1,66;21,2;high;0;3;poor;0;no;university;2;0
+376;11;3,977;1;0;1,79;22;middle;0;2;average;0;no;high school;1;0
+377;10;3,354;1;0;1,6;20,9;high;0;3;average;0;no;university;2;0
+378;11;3,411;0;0;1,61;22,9;high;0;5;poor;0;no;university;2;0
+379;11;3,587;1;0;1,64;18,6;high;0;2;good;0;no;university;1;0
+380;11;3,845;1;0;1,74;21,5;high;0;0;average;0;no;university;0;0
+381;12;2,971;1;0;1,64;14,5;high;0;13;good;1;no;high school;4;0
+382;10;2,891;0;0;1,55;22,6;high;0;0;poor;0;no;university;0;0
+383;10;1,823;0;0;1,45;20,9;high;0;4;average;0;no;university;3;0
+384;11;2,417;1;0;1,59;20,8;high;1;3;poor;0;no;university;2;0
+385;10;2,175;0;0;1,47;22,1;high;1;0;poor;0;no;university;0;0
+386;11;2,735;0;0;1,59;14,8;high;0;0;average;0;no;university;0;0
+387;14;4,273;1;0;1,84;20,1;high;0;0;good;0;no;university;0;0
+388;13;2,976;1;0;1,66;20,6;high;0;1;good;0;no;high school;1;0
+389;11;4,065;1;0;1,69;16,5;middle;0;0;good;0;no;high school;0;0
+390;11;2,318;0;0;1,5;22,7;high;1;2;good;0;no;high school;1;0
+391;11;3,596;1;0;1,73;18,5;high;0;3;poor;0;no;university;2;0
+392;14;3,395;0;0;1,7;18,8;high;0;3;poor;0;no;university;3;0
+393;12;2,751;0;0;1,6;20,8;high;1;1;average;0;no;high school;1;0
+394;10;2,673;0;0;1,64;22,5;high;0;4;good;0;no;high school;2;0
+395;12;2,556;0;0;1,57;21,7;middle;0;1;average;0;no;university;2;0
+396;11;2,542;0;0;1,57;20,9;high;0;1;good;0;no;university;1;1
+397;10;2,608;1;0;1,68;22,6;middle;0;2;good;0;no;university;2;0
+398;11;2,354;0;0;1,57;21,6;high;0;2;good;0;no;university;1;0
+399;10;1,458;0;0;1,45;18,4;high;0;0;good;0;no;university;0;0
+400;10;3,795;1;0;1,74;18,8;high;0;2;average;0;no;university;2;0
+401;11;2,491;0;0;1,5;21,4;high;0;2;good;0;no;high school;1;0
+402;13;3,06;0;0;1,56;20,7;high;0;2;average;0;yes;university;1;0
+403;10;2,545;1;0;1,65;21;high;0;1;poor;0;no;university;1;1
+404;11;2,993;1;0;1,69;18,7;high;0;0;average;0;no;university;0;0
+405;10;3,305;0;0;1,65;16,9;high;0;0;average;0;no;university;0;0
+406;11;3,774;0;0;1,7;14,9;middle;0;1;average;0;no;high school;1;0
+407;10;2,855;1;0;1,64;19,8;high;1;2;average;0;no;university;1;0
+408;11;2,988;1;0;1,78;21,9;high;0;0;average;0;no;university;0;0
+409;11;2,498;1;0;1,52;18,6;high;0;0;good;0;no;high school;0;0
+410;14;3,169;0;0;1,63;21,9;high;0;2;average;0;no;university;2;0
+411;11;2,887;1;0;1,59;21,9;middle;1;7;good;0;no;high school;2;0
+412;13;2,704;0;0;1,55;22,7;high;0;1;good;0;no;university;2;0
+413;11;3,515;0;0;1,63;18,8;high;0;14;average;0;no;university;4;0
+414;11;3,425;1;0;1,66;19;high;1;2;poor;0;no;university;2;0
+415;10;2,287;0;0;1,55;17,2;high;0;1;good;0;no;university;1;0
+416;13;2,434;0;0;1,66;21,2;high;0;2;average;0;no;university;1;0
+417;10;2,365;0;0;1,61;19,2;high;0;1;poor;0;no;high school;1;0
+418;10;2,696;1;0;1,68;20,1;high;0;3;good;0;no;high school;2;0
+419;12;2,868;0;0;1,57;22;high;0;3;average;0;no;university;3;0
+420;10;2,813;0;0;1,56;21,7;high;0;3;average;0;no;university;2;0
+421;12;3,255;0;0;1,68;18,7;high;0;3;average;0;no;university;2;0
+422;11;4,593;1;0;1,75;21,4;middle;1;1;good;0;no;high school;2;0
+423;14;4,111;1;0;1,8;20,7;high;1;1;average;0;no;university;2;0
+424;12;1,916;1;0;1,54;16,8;high;0;8;good;0;no;university;4;0
+425;10;1,858;1;0;1,47;21,9;high;0;3;poor;0;no;high school;3;0
+426;10;3,35;1;0;1,75;18,2;middle;1;0;good;0;no;high school;0;0
+427;10;2,901;1;0;1,51;19,6;high;0;2;average;0;no;university;1;0
+428;12;2,241;1;0;1,63;18,1;high;0;1;average;0;no;university;1;0
+429;13;4,225;1;0;1,88;18,6;middle;0;0;average;0;no;high school;0;0
+430;11;3,223;0;0;1,64;23,2;high;0;0;good;0;no;high school;0;0
+431;12;5,224;1;0;1,78;17,9;high;0;1;average;0;no;university;2;0
+432;11;4,073;1;0;1,7;19,2;high;0;4;poor;0;no;high school;2;0
+433;12;4,08;1;0;1,64;21,9;high;0;3;average;0;no;university;3;1
+434;11;2,606;0;0;1,65;23,7;high;0;2;poor;0;no;university;2;0
+435;12;4,411;1;0;1,73;18,2;high;0;12;average;0;no;university;3;0
+436;12;3,791;1;0;1,74;17,4;high;0;4;average;0;no;high school;3;0
+437;13;3,089;1;0;1,71;19,2;high;0;1;average;0;no;university;2;0
+438;11;2,465;1;0;1,52;19,5;middle;1;2;good;0;yes;high school;1;0
+439;10;3,2;1;0;1,65;20,4;high;0;2;average;0;no;university;2;0
+440;12;2,913;1;0;1,63;19,5;middle;0;1;good;1;no;university;2;1
+441;13;4,877;1;0;1,85;19,7;high;0;10;average;0;no;university;3;0
+442;10;2,358;0;0;1,5;19;high;0;1;good;0;no;university;2;0
+443;12;3,279;1;0;1,79;18,6;high;0;1;good;0;no;university;1;1
+444;10;2,581;1;0;1,68;21,8;middle;0;3;good;0;no;high school;3;0
+445;12;2,347;0;0;1,56;22,1;high;0;2;poor;1;no;university;2;0
+446;10;2,691;0;0;1,7;24,5;high;0;2;good;0;no;high school;2;0
+447;11;2,827;0;0;1,59;25,5;middle;0;0;average;0;no;university;0;0
+448;10;1,873;1;0;1,33;20,1;high;1;5;average;0;no;university;2;0
+449;14;2,538;0;0;1,8;22,4;high;0;0;average;0;no;university;0;0
+450;10;2,758;1;0;1,66;21,5;high;0;4;good;0;no;university;2;0
+451;10;3,05;0;0;1,52;19,5;high;0;2;poor;0;no;university;2;0
+452;12;3,079;0;0;1,52;18,5;high;0;0;average;0;no;high school;0;0
+453;10;2,201;1;0;1,54;22,2;high;0;0;average;0;no;university;0;0
+454;10;1,858;1;0;1,5;18,7;high;0;1;average;0;no;university;2;0
+455;12;3,403;0;0;1,57;20,4;high;0;1;poor;0;no;university;2;0
+456;12;3,501;0;0;1,64;20,3;high;0;0;average;0;no;university;0;0
+457;11;2,578;0;0;1,6;24,8;high;0;5;good;0;no;university;3;0
+458;10;1,665;1;0;1,45;19,2;high;0;0;poor;0;no;high school;0;0
+459;11;2,081;0;0;1,6;17,8;high;0;1;poor;0;no;high school;2;1
+460;11;2,974;0;0;1,57;22,3;middle;0;5;average;0;no;high school;2;0
+461;12;4,073;1;0;1,74;18,6;high;0;3;good;0;no;university;2;0
+462;13;4,448;1;0;1,75;22,6;high;0;5;average;0;no;high school;2;0
+463;13;3,984;1;0;1,8;17,2;high;0;5;average;0;no;university;2;0
+464;10;2,25;0;0;1,47;20,6;high;1;1;good;0;yes;university;2;0
+465;12;2,752;0;0;1,61;21,7;high;0;0;poor;0;no;university;0;0
+466;14;3,68;1;0;1,7;20,7;high;0;1;good;0;yes;university;1;0
+467;10;2,862;0;0;1,55;19,3;high;0;1;average;0;no;university;2;0
+468;11;3,023;0;0;1,71;19;high;0;8;average;0;no;university;3;0
+469;11;3,681;0;0;1,73;19,9;high;0;0;poor;0;no;high school;0;0
+470;13;3,255;0;0;1,69;21,4;high;0;0;good;0;no;university;0;0
+471;12;3,692;1;0;1,7;21,5;high;0;7;good;0;no;university;2;0
+472;10;2,356;0;0;1,54;21,4;high;0;1;average;0;no;university;1;0
+473;10;4,591;1;0;1,78;19,5;high;0;2;good;0;no;high school;2;0
+474;12;3,082;0;0;1,61;19,4;high;0;0;average;0;no;high school;0;0
+475;11;3,258;0;0;1,6;21,1;high;0;1;average;0;no;high school;1;0
+476;10;2,216;1;0;1,55;17,9;high;0;0;poor;0;no;university;0;1
+477;11;3,247;1;0;1,66;19,4;high;0;4;average;0;no;university;3;0
+478;11;4,324;1;0;1,71;17,2;high;0;12;good;0;no;university;3;1
+479;11;2,362;0;0;1,55;19,4;high;0;2;good;0;no;high school;1;0
+480;11;2,563;0;0;1,6;19,7;high;0;2;good;0;no;university;2;1
+481;11;3,206;1;0;1,61;21,5;high;0;1;poor;0;no;high school;1;0
+482;14;3,585;1;0;1,78;17,7;high;0;0;average;0;no;university;0;0
+483;12;4,72;1;0;1,82;18,9;high;0;8;good;0;no;university;3;0
+484;13;3,331;0;0;1,66;20,9;high;0;1;good;0;no;high school;2;0
+485;13;5,083;1;0;1,88;17,6;high;0;1;good;0;yes;university;1;0
+486;12;2,417;0;0;1,55;22,4;high;0;1;average;0;no;university;2;0
+487;10;2,364;1;0;1,55;19,6;high;0;2;good;0;no;university;1;0
+488;10;2,341;1;0;1,55;20,6;high;0;NA;average;0;no;university;NA;0
+489;12;3,231;1;0;1,6;15,3;high;0;4;poor;0;no;university;2;0
+490;11;3,078;1;0;1,71;21,3;high;0;0;poor;0;no;university;0;0
+491;11;3,369;1;0;1,79;20,5;middle;1;2;good;0;no;high school;2;0
+492;12;3,529;1;0;1,79;16;high;0;2;average;0;no;university;2;0
+493;12;2,866;0;0;1,57;20,8;high;0;0;average;0;no;high school;0;0
+494;14;2,891;0;0;1,57;17,5;high;0;1;average;0;no;university;2;0
+495;11;3,022;0;0;1,56;20;high;0;2;average;0;no;high school;2;0
+496;10;3,127;1;0;1,57;20,6;high;0;6;average;0;no;university;2;0
+497;11;2,866;0;0;1,54;23,6;high;0;2;average;0;no;high school;1;0
+498;12;2,605;0;0;1,59;19,9;high;0;0;good;0;no;university;0;0
+499;13;3,056;0;0;1,6;20,4;high;0;10;average;0;no;university;3;0
+500;12;2,569;0;0;1,6;19,3;high;1;0;average;1;no;high school;0;0
+501;11;2,501;0;0;1,57;20,2;high;0;3;poor;0;no;university;2;0
+502;11;3,32;1;0;1,66;18,8;high;0;1;poor;0;no;university;1;0
+503;11;2,123;1;0;1,65;17,6;high;1;2;good;0;no;university;1;0
+504;14;3,78;1;0;1,78;22,1;high;0;3;good;0;no;university;2;0
+505;11;3,847;1;0;1,68;21,2;high;0;1;average;0;no;university;1;0
+506;12;3,924;1;0;1,73;18;high;1;2;poor;0;no;university;2;0
+507;10;2,132;1;0;1,5;18,5;high;0;2;good;0;no;university;1;0
+508;12;2,752;1;0;1,74;20,6;high;0;2;poor;0;no;university;1;0
+509;13;2,449;0;0;1,6;19,7;middle;0;5;average;0;no;university;2;0
+510;10;3,456;1;0;1,6;23,1;high;0;0;average;0;no;university;0;0
+511;10;3,073;0;0;1,68;18,8;high;0;1;average;0;no;university;2;0
+512;10;2,688;0;0;1,57;21,2;high;0;7;average;1;no;university;2;0
+513;10;3,329;1;0;1,73;20,9;high;1;2;average;0;no;university;1;0
+514;14;4,271;1;0;1,84;17,6;middle;0;7;average;0;no;university;3;0
+515;12;3,53;1;0;1,63;22;high;0;5;poor;0;no;high school;3;0
+516;11;2,928;1;0;1,66;19;high;1;1;good;0;no;university;1;1
+517;11;2,689;0;0;1,56;18,8;middle;1;4;good;0;no;high school;3;0
+518;12;2,332;1;0;1,45;20,8;high;0;2;average;0;no;university;2;0
+519;14;2,934;0;0;1,63;19,8;high;1;0;good;0;no;university;0;0
+520;10;3,11;1;0;1,64;22,2;high;0;0;poor;0;no;university;0;0
+521;11;2,894;1;0;1,7;21,1;high;0;1;average;0;no;university;2;0
+522;10;2,435;0;0;1,65;16,9;high;0;2;average;0;no;high school;1;0
+523;10;2,838;0;0;1,6;20,1;middle;1;1;average;0;no;university;2;0
+524;12;3,035;0;0;1,57;18,4;middle;0;5;average;0;no;high school;3;0
+525;12;4,831;1;0;1,8;17,8;high;1;11;average;0;no;high school;4;0
+526;11;2,812;1;0;1,55;20,9;high;0;1;good;0;no;high school;1;0
+527;12;2,714;0;0;1,66;22,1;high;0;1;average;0;no;high school;2;0
+528;10;3,086;0;0;1,57;22,7;high;0;6;poor;0;no;high school;3;0
+529;12;3,519;0;0;1,66;18,5;high;0;2;good;0;no;university;1;0
+530;13;4,232;1;0;1,79;18,1;high;0;3;average;0;no;high school;2;0
+531;10;2,77;1;0;1,57;22,3;high;0;1;poor;0;no;university;1;0
+532;12;3,341;0;0;1,66;20,8;middle;1;4;good;0;no;high school;3;0
+533;10;3,09;1;0;1,65;20,3;high;0;1;average;0;no;university;2;0
+534;13;2,531;1;0;1,55;20,8;high;1;0;poor;0;no;university;0;0
+535;12;2,822;1;0;1,77;18,8;middle;1;2;good;0;no;university;2;0
+536;12;2,935;1;0;1,66;19;high;0;0;average;0;yes;university;0;0
+537;10;2,568;0;0;1,61;20,8;high;0;0;average;0;no;high school;0;0
+538;11;2,387;1;0;1,54;17,4;high;0;1;poor;0;no;university;2;0
+539;12;2,499;1;0;1,65;19,6;high;0;2;poor;0;no;university;1;0
+540;11;4,13;1;0;1,7;18,6;high;0;3;average;0;no;university;2;0
+541;12;3,001;0;0;1,61;22,6;high;0;0;average;0;no;university;0;0
+542;10;3,132;0;0;1,51;20;middle;1;1;good;0;no;university;2;0
+543;13;3,577;0;0;1,61;18,6;high;0;4;average;0;no;university;2;0
+544;12;3,222;0;0;1,55;22,7;high;0;3;good;0;no;NA;2;0
+545;11;3,28;1;0;1,68;16,2;high;0;2;average;1;no;university;1;0
+546;11;2,659;1;0;1,63;17,4;high;0;7;good;0;no;university;3;0
+547;11;2,822;0;0;1,57;24,7;high;0;2;poor;0;no;high school;2;0
+548;11;2,14;0;0;1,54;22,9;high;1;1;average;0;no;high school;1;0
+549;12;4,203;1;0;1,8;20;high;0;2;average;0;no;university;2;0
+550;14;2,997;0;0;1,64;21,1;middle;0;0;average;0;no;university;0;0
+551;11;2,562;0;0;1,59;18,5;high;0;1;average;0;no;high school;1;0
+552;12;3,082;0;0;1,64;19,6;high;0;2;average;0;no;university;1;0
+553;14;3,806;1;0;1,73;17,5;high;0;4;good;0;no;university;3;0
+554;11;2,458;0;0;1,52;20,8;high;0;4;poor;0;no;university;3;0
+555;10;2,391;1;0;1,51;17,5;middle;0;1;good;0;no;university;1;0
+556;13;3,141;0;0;1,55;19,3;high;1;2;poor;0;no;high school;2;0
+557;12;2,579;0;0;1,6;26,6;high;0;2;average;0;no;university;2;0
+558;10;2,1;1;0;1,47;19,7;middle;0;1;good;0;no;high school;1;0
+559;11;2,785;1;0;1,75;18,5;high;0;2;average;0;no;university;1;0
+560;15;4,284;1;0;1,78;17;high;0;1;average;0;no;university;2;0
+561;18;2,906;0;0;1,68;23,1;middle;0;5;good;0;no;university;3;0
+562;19;5,102;1;0;1,83;18,5;high;1;2;poor;0;no;high school;2;0
+563;17;4,429;1;0;1,78;20,4;high;0;1;good;0;no;university;1;0
+564;15;4,279;1;0;1,71;21,7;high;0;1;average;0;no;university;1;0
+565;15;4,5;1;0;1,78;22,4;middle;0;0;good;0;no;high school;0;0
+566;15;2,635;0;0;1,63;19,7;high;1;1;poor;0;no;university;1;1
+567;18;3,082;0;0;1,64;24,5;high;0;3;average;0;no;university;3;0
+568;16;3,387;0;0;1,69;17,4;high;0;0;average;0;no;university;0;0
+569;16;3,645;1;0;1,87;19,8;middle;0;5;good;0;no;high school;3;0
+570;15;2,887;0;0;1,6;22,6;high;0;6;poor;0;no;university;3;0
+571;16;4,504;1;0;1,83;19,1;high;0;0;average;0;no;university;0;0
+572;17;5,638;1;0;1,78;22,8;high;0;10;average;0;no;university;3;1
+573;18;2,853;0;0;1,52;20,8;middle;0;2;good;0;no;high school;1;0
+574;15;3,211;0;0;1,69;16,9;high;1;1;poor;0;no;university;1;0

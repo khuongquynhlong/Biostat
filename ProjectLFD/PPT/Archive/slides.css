@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --blue-color: #025196;
+    --yellow-color: #fd8d3c;
+    --red-color: #E73B2B;
+    --white-color: #f0f0f0;
+}
+
+
+
+b {
+    font-family: 'Fira Sans';
+    font-weight: 300;
+    color: var(--white-color);
+}
+
+body {
+    font-family: 'Fira Sans';
+    font-weight: 300;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+h1, h2 {
+    font-family: 'Fira Sans Condensed';
+    font-weight: 700;
+    color: var(--red-color);
+}
+
+h3 {
+    font-family: 'Fira Sans Condensed';
+    font-weight: 500;
+    color: var(--white-color);
+    text-align: left;
+}
+
+
+
+.inverse {
+    background-color: var(--red-color);
+}
+
+
+.subsection h1 {
+    font-size: 75px;
+    color: var(--white-color);
+}
+
+.big-subsection h1 {
+    font-size: 75px;
+    color: var(--white-color);
+}
+
+
+.my-title-slide {
+    background-image: url(./resources/UHasselt-standaard.png);
+    background-position: top right;
+    background-size: 15%;
+
+}
+
+.my-title-slide h1 {
+    font-family: 'Fira Sans Condensed';
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--yellow-color);
+    text-align: center;
+}
+
+
+.my-title-slide h2 {
+    font-family: 'Fira Sans Condensed';
+    color: var(--white-color);
+    font-size: 30px;
+    text-align: left;
+}
+
+.my-title-slide h3 {
+    font-family: 'Fira Sans Condensed';
+    color: var(--white-color);
+    font-size: 25px;
+    text-align: left;
+}
+
+.my-title-slide p {
+    font-family: 'Fira Sans Condensed';
+    display: block;
+    margin-block-start: 1px;
+    margin-block-end: 1px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: var(--white-color);
+    font-size: 30px;
+    font-style: italic;
+}
+
+.my-title-slide strong {
+    font-family: 'Fira Sans Condensed';
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.my-title-slide .remark-slide-number {
+  display: none;
+}
+
+
+.footnote {
+    bottom: 0.5em;
+    left: 0.5em;
+}
+
+.references {
+    position: absolute;
+    padding-right: 4em;
+    bottom: 0.5em;
+    left: 3em;
+    font-size: 0.75em;
+}
+
+.remark-slide-content {
+    font-family: 'Fira Sans';
+    font-size: 28px;
+    padding-right: 30px;
+}
+
+
+.remark-slide-number {
+    color: var(--blue-color);
+    font-size: 0.75em;
+}
+
+
+.remark-code, .remark-inline-code {
+    font-family: 'consolas';
+    font-weight: 400;
+}
+
+
+.small .remark-code-line,
+.small .remark-code-line  {
+    font-size: 10px;
+}
+
+
+.remark-code {
+    font-size: 20px;
+}
+
+.text-highlight {
+    color: var(--blue-color);
+}
+
+a {
+    color: var(--yellow-color);
+}
+
+a:hover {
+    color: var(--yellow-color);
+}
+
+a:focus {
+    color: var(--yellow-color);
+}
+
+a:visited {
+    color: var(--yellow-color);
+}
+
+.hljs-github .hljs-keyword, .hljs-github .hljs-selector-tag, .hljs-github .hljs-subst {
+    color: #e7298a;
+    font-weight: bold;
+    font-family: consolas;
+    font-size: 20px;
+}

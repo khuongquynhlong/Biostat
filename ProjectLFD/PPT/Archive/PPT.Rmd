@@ -1,0 +1,185 @@
+---
+title:  |
+  # Project: Learning from Data   
+  # Effect of Smoking on the Pulmonary Function Among Children Aged 3 to 19 Years: A Cross-Sectional Study
+subtitle: |
+  Group 2:  
+  Deo Byabazaire  
+  Edmond Sacla Aide  
+  Gudeta Aga Hirko  
+  Mohammad Sazegar  
+  Quynh Long Khuong
+date: "January, 12th, 2022"
+output:
+  xaringan::moon_reader:
+    css: ['slides.css']
+    lib_dir: libs
+    nature:
+      titleSlideClass: ['inverse', my-title-slide]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+---
+class: inverse middle center big-subsection
+
+```{r setup, include=FALSE, cache = FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(cache = TRUE, dev = 'svg', echo = TRUE, message = FALSE, warning = FALSE, fig.height=6, fig.width = 1.777777*6)
+
+library(tidyverse)
+library(magrittr)
+library(mice)
+library(VIM)
+library(psych)
+library(table1)
+library(car)
+
+
+## plot defaults
+theme_set(theme_minimal(base_size = 16, base_family = 'Fira Sans'))
+```
+
+# Outline
+
+### Introduction
+
+### Methods
+
+### Results
+
+### Conclusion
+
+---
+# Introduction
+
+* Negative effect of smoking on the overall health
+
+* The most affected organ of the body is the lungs
+
+* Negative effect of parental smoking on pulmonary function and lung growth in children 
+
+* Main objective : The effect of smoking on the FEV of the children aged 3 to 19 years
+
+* Secondary objective : The effect of parental smoking on the FEV of the children
+
+
+
+---
+# Methodology
+
+* **Study design**
+  - Cross-sectional subset of a longitudinal observational survey
+  - Among East Boston area families (USA)
+  - One child per family
+  - Total of 654 children
+
+* **Variables of Interest**
+  - Outcome : FEV
+  - Exposures : smoke and parent smoke
+  - Confounders :
+  - Main objective : age, gender, sport activity, mother education, and household SES
+  - Secondary objective : age, mother education, and household SES
+
+
+---
+# Methodology
+
+* **Set of confounders were selected based on the Directed Acyclic Graphs**
+  - Causal relationships
+  - Confounding paths between exposure and outcome
+  - Unbiased estimates
+
+
+---
+background-image: url('resources/DAG.png')
+background-size: 90%
+
+
+# Directed Acyclic Graphs
+
+---
+# Methodology
+
+* **Descriptive Statistics**
+  + Categorical variables : frequency analysis
+  + Continuous variables
+      - Normally distributed : means (standard deviations - SD) 
+      - Skewed distributed : medians (interquartile range – IQR)
+  + Marginal normal distribution control : histograms 
+  + Summarized by smoking type and total
+
+* **Percentage of missing values**
+* **Typos and unrealistic values**
+
+
+---
+# Methodology
+
+
+* **Modeling**
+  + Multiple linear regressions
+      - Continuous response variables
+      - No control needed for differences
+      - Only two categories of exposure variables
+      - More than one independent variables
+  + 95% confidence interval
+  + p-values
+  + two-sided hypotheses
+  + t-statistics
+
+
+---
+# Methodology
+
+**Main Objective Models**
+
+\begin{equation}
+Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i}+\beta_{5}x_{5i}+\beta_{6}x_{6i} +\varepsilon_{i}
+\end{equation}
+
+\begin{equation}
+Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i}+\beta_{5}x_{5i}+\beta_{6}x_{6i} + \beta_{7}x_{1i}x_{3i} +\varepsilon_{i}
+\end{equation}
+
+$x_{1i}$: smoking status, $x_{2i}$: age, $x_{3i}$: gender,  $x_{4i}$:sport activities, $x_{5i}$:mother's education, $x_{6i}$: household SES.
+
+**Secondary Objective Model**
+
+\begin{equation}
+Y_{i}=\beta_{0}+\beta_{1}x_{1i}+\beta_{2}x_{2i}+\beta_{3}x_{3i}+\beta_{4}x_{4i} +\varepsilon_{i}
+\end{equation}
+
+$x_{1i}$: parent smoking, $x_{2i}$: age, $x_{3i}$: mother education,  $x_{4i}$: household SES
+
+
+---
+# Methodology
+
+* **Modeling Diagnostic**
+  + Normality assumption of error terms : normal probability plots (Q-Q plot)
+  + Constancy of error variance : scatter plot of the square root of standardized residuals and fitted values
+  + Linearity : residual versus regressors plot
+  + Outliers : residual plot
+  + Multicollinearity : Generalized Variance Inflation Factor
+      - $GVIF^{(1/(2∗DF))}$ criterion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
