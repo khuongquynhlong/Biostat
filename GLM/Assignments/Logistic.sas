@@ -1,9 +1,7 @@
 %let path = https://raw.githubusercontent.com/khuongquynhlong/Biostat/main/GLM/Assignments;
 
 
-/*************************************************************************
-                                Read data
-/************************************************************************/
+*----- Read data;
 
 * Individual data;
 filename probly temp;
@@ -41,10 +39,7 @@ run;
 proc print data=toxic_agg (obs=10);
 run;
 
-
-/*************************************************************************
-                        Simple logistic regression
-/************************************************************************/
+*----- Logistic regressions;
 
 * Individual data;
 
