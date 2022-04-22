@@ -45,12 +45,12 @@ run;
 
 proc logistic data=toxic_invi;
 	model nadv = dose_scale;
-	ods select GoodnessOfFit FitStatistics ParameterEstimates;
+	ods select FitStatistics ParameterEstimates;
 run;
 
 
 * Aggregated data;
 proc logistic data=toxic_agg;
 	model nadv/litter_size = dose_scale;
-	ods select GoodnessOfFit FitStatistics ParameterEstimates;
+	ods select FitStatistics ParameterEstimates;
 run;
