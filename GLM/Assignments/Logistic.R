@@ -7,6 +7,9 @@ df_indi <- read.csv(paste0(path, "dehp_indi.csv"))
 # Aggregated data
 df_agg <- read.csv(paste0(path, "dehp_short.csv"))
 
+head(df_indi)
+head(df_agg)
+
 # Logistic regressions
 m_indi = glm(nadv ~ dose_scale, data = df_indi, family = binomial(link = "logit"))
 

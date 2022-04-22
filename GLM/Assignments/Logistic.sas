@@ -1,63 +1,61 @@
-%let path = https://raw.githubusercontent.com/khuongquynhlong/Biostat/main/GLM/Assignments/;
+%let path = https://raw.githubusercontent.com/khuongquynhlong/Biostat/main/GLM/Assignments;
+
+
+/*************************************************************************
+                                Read data
+/************************************************************************/
 
 * Individual data;
-
-
 filename probly temp;
 proc http
- url="https://raw.githubusercontent.com/zonination/perceptions/master/probly.csv"
+ url="&path/dehp_indi.csv"
  method="GET"
  out=probly;
 run;
 
-/* Tell SAS to allow "nonstandard" names */
-options validvarname=any;
-
-/* import to a SAS data set */
 proc import
   file=probly
-  out=probly replace
+  out=toxic_invi replace
   dbms=csv;
 run;
 
 
+* Aggregated data;
+filename probly temp;
+proc http
+ url="&path/dehp_short.csv"
+ method="GET"
+ out=probly;
+run;
+
+proc import
+  file=probly
+  out=toxic_agg replace
+  dbms=csv;
+run;
 
 
+proc print data=toxic_invi (obs=10); 
+run;
+
+proc print data=toxic_agg (obs=10);
+run;
 
 
+/*************************************************************************
+                        Simple logistic regression
+/************************************************************************/
 
-proc import datafile = "https://raw.githubusercontent.com/khuongquynhlong/Biostat/main/GLM/Assignments/dehp_indi.csv" out=toxic_invi
-		dbms=csv replace;
-		guessingrows=max;
-	getnames=yes;
+* Individual data;
+
+proc logistic data=toxic_invi;
+	model nadv = dose_scale;
+	ods select GoodnessOfFit FitStatistics ParameterEstimates;
 run;
 
 
 * Aggregated data;
-proc import datafile = "&path\dehp_short.csv" out=toxic_short
-		dbms=csv replace;
-		guessingrows=max;
-	getnames=yes;
-run;
-
-proc print data=toxic_short (obs=5);
-run;
-
-
-proc print data=toxic_invi (obs=5);
-run;
-
-/*************************************************************************
-                             Binomial response
-/************************************************************************/
-
-********** Simple logistic regression;
-proc logistic data=toxic_short;
+proc logistic data=toxic_agg;
 	model nadv/litter_size = dose_scale;
-	ods select GoodnessOfFit FitStatistics ParameterEstimates;
-run;
-
-proc logistic data=toxic_invi;
-	model nadv = dose_scale;
 	ods select GoodnessOfFit FitStatistics ParameterEstimates;
 run;
