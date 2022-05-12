@@ -1,0 +1,36 @@
+city,region,province,long,lat
+Edmonton,Continental,Alberta,-113.323975,53.631611
+Calgary,Continental,Alberta,-114.066666,51.049999
+Kamloops,Pacific,British Colombia,-120.340836,50.676109
+Vancouver,Pacific,British Colombia,-123.116226,49.246292
+Victoria,Pacific,British Colombia,-123.329773,48.407326
+Pr. George,Pacific,British Colombia,-122.749443,53.916943
+Pr. Rupert,Pacific,British Colombia,-130.305405,54.312519
+Winnipeg,Continental,Manitoba,-97.138451,49.895077
+The Pas,Continental,Manitoba,-101.247613,53.825527
+Churchill,Continental,Manitoba,-94.164963,58.76841
+Fredericton,Atlantic,New Brunswick,-66.646332,45.964993
+St. Johns,Atlantic,Newfoundland,-52.71283,47.560539
+Yellowknife,Continental,Northwest Territories,-114.371788,62.453972
+Inuvik,Arctic,Northwest Territories,-133.723022,68.360741
+Halifax,Atlantic,Nova Scotia,-63.582687,44.65107
+Sydney,Atlantic,Nova Scotia,-60.193233,46.138927
+Yarmouth,Atlantic,Nova Scotia,-66.117382,43.837458
+Iqaluit,Arctic,Nunavut,-68.519722,63.748611
+Resolute,Arctic,Nunavut,-94.909393,74.686447
+Charlottvl,Atlantic,Ontario,-79.508278,43.837208
+Ottawa,Atlantic,Ontario,-75.695,45.424721
+Toronto,Atlantic,Ontario,-79.347015,43.65107
+London,Atlantic,Ontario,-81.249725,42.983612
+Thunder Bay,Continental,Ontario,-89.246109,48.382221
+Scheffervll,Atlantic,Quebec,-66.833336,54.799999
+Arvida,Atlantic,Quebec,-71.1833,48.4333
+Bagottville,Atlantic,Quebec,-70.994893,48.334957
+Quebec,Atlantic,Quebec,-71.254028,46.829853
+Sherbrooke,Atlantic,Quebec,-71.888351,45.404476
+Montreal,Atlantic,Quebec,-73.561668,45.508888
+Regina,Continental,Saskatchewan,-104.618896,50.44521
+Pr. Albert,Continental,Saskatchewan,-105.753075,53.20335
+Uranium City,Continental,Saskatchewan,-108.616667,59.566667
+Whitehorse,Continental,Yukon,-135.056839,60.721188
+Dawson,Continental,Yukon,-139.432037,64.060066

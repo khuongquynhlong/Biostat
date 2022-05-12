@@ -44,7 +44,7 @@ run;
 * Individual data;
 
 proc logistic data=toxic_invi;
-	model nadv = dose_scale;
+	model nadv(ref = "0") = dose_scale;
 	ods select FitStatistics ParameterEstimates;
 run;
 
